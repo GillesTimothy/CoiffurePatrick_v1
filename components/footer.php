@@ -10,10 +10,10 @@
                         <li><a href="checkout.php">Mon Compte</a></li>
                     </ul>
                     <hr>
-                    <h4>User Section</h4>
+                    <h4>Section Utilisateur</h4>
                     <ul>
-                        <li><a href="checkout.php">Mon Panier</a></li>
-                        <li><a href="inscription.php">Contactez-Nous</a></li>
+                        <li><a href="checkout.php">Connexion</a></li>
+                        <li><a href="inscription.php">Enregistrement</a></li>
                     </ul>
                     <hr class="hidden-md hidden-lg hidden-sm">
                     
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="col-sm-6 col-md-3">
-                    <h4>Find us</h4>
+                    <h4>Retrouvez-nous</h4>
                     <p>
                         <strong>Coiffure Patrick.</strong>
                         <br/>1300 Wavre
@@ -39,7 +39,7 @@
                         <br/>Belgique
                         <br/>010 24 61 66
                     </p>
-                    <a href="contact.php">Check our contact page</a>
+                    <a href="contact.php">Page de Contact</a>
                     <hr class="hidden-md hidden-lg">    
                 </div>
 
@@ -59,7 +59,7 @@
                     </form>
 
                     <hr>
-                    <h4>Keep in Touch</h4>
+                    <h4>Rester Connecté</h4>
                     <p class="social">
                         <a href="#" class="fa fa-facebook"></a>
                         <a href="#" class="fa fa-twitter"></a>
@@ -79,7 +79,7 @@
                 <p class="pull-left">&copy; 2021 Coiffure Patrick - All Right Reserve</p>
             </div>
             <div class="col-md-6">
-                <p class="pull-right">Theme by  <a href="https://www.linkedin.com/in/timothy-gilles-6b5225185/">TiGilles </a><i class="fa fa-linkedin"></i></p>
+                <p class="pull-right">Thème par  <a href="https://www.linkedin.com/in/timothy-gilles-6b5225185/">Timothy Gilles </a><i class="fa fa-linkedin"></i></p>
             </div>
         </div>
     </div>
