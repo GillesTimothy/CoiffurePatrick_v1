@@ -30,7 +30,11 @@
 
     <?php include 'components/introducing_box.php'; ?>
 
+    <?php include 'components/service_storefront.php'; ?>
+
     <?php include 'components/product_storefront.php'; ?>
+    
+    <?php include 'components/open_hour.php'; ?>
 
     <?php include 'components/footer.php'; ?>
 
