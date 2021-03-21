@@ -22,7 +22,7 @@
                             <i class="fa fa-clock-o"></i>
                         </div>
                         <h3>MARDI</h3>
-                        <p class="heures">REPOS</p>
+                        <p class="heures">repos</p>
                     </div>
                 </div>
                 <div class="col-sm-2">

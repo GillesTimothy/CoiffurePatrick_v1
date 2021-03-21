@@ -6,7 +6,7 @@
                     <ul>
                         <li><a href="panier.php">Mon Panier</a></li>
                         <li><a href="contact.php">Contactez-Nous</a></li>
-                        <li><a href="shop.php">Boutique</a></li>
+                        <li><a href="boutique.php">Boutique</a></li>
                         <li><a href="checkout.php">Mon Compte</a></li>
                     </ul>
                     <hr>
@@ -26,6 +26,11 @@
                         <li><a href="#">Brosses</a></li>
                         <li><a href="#">Cheveux</a></li>
                         <li><a href="#">Autres</a></li>
+                    </ul>
+                    <hr>
+                    <h4>Rendez-Vous</h4>
+                    <ul>
+                        <li><a href="rdv.php">Prendre Rendez-Vous</a></li>
                     </ul>
                     <hr class="hidden-md hidden-lg">    
                 </div>

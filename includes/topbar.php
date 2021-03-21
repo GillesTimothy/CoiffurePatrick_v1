@@ -11,12 +11,6 @@
                         <a href="inscription.php">Inscription</a>
                     </li>
                     <li>
-                        <a href="checkout.php">Mon Compte</a>
-                    </li>
-                    <li>
-                        <a href="panier.php">Panier</a>
-                    </li>
-                    <li>
                         <a href="checkout.php">Connexion</a>
                     </li>
                 </ul>

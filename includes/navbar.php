@@ -1,4 +1,4 @@
-<div id="navbar" class="navbar navbar-default">
+<div id="navbar" class="navbar navbar-default fixed">
         <div class="container">
             <div class="navbar-header">
                 <a href="index.php" class="navbar-brand home">
@@ -22,13 +22,10 @@
                             <a href="index.php">Accueil</a>
                         </li>
                         <li>
-                            <a href="service.php">Service</a>
+                            <a href="rdv.php">Rendez-Vous</a>
                         </li>
                         <li>
-                            <a href="rendezVous.php">Rendez-Vous</a>
-                        </li>
-                        <li>
-                            <a href="Boutique.php">Boutique</a>
+                            <a href="boutique.php">Boutique</a>
                         </li>
                         <li>
                             <a href="checkout.php">Mon Compte</a>
@@ -44,19 +41,28 @@
                 <div class="navbar-collapse collapse right">
                     <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search">
                         <span class="sr-only">Toggle Search</span>
-                        <i class="fa fa-search"></i>
+                        <i class="fa fa-user"></i>
                     </button>
                 </div>
                 
                 <div class="collapse clearfix" id="search">
                     <form method="get" action="results.php" class="navbar-form">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="search" name="user_query" required>
-                            <span class="input-group-btn">
-                                <button type="submit" name="search" value="search" class="btn btn-primary">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
+
+                            <a href="panier.php" class="btn navbar-btn btn-primary right">
+                            <i class="fa fa-user"></i>
+                            <span>Mes Rendez-vous</span>
+                            </a>
+
+                            <a href="panier.php" class="btn navbar-btn btn-primary right">
+                            <i class="fa fa-user"></i>
+                            <span>Mes commandes</span>
+                            </a>
+
+                            <a href="panier.php" class="btn navbar-btn btn-primary right">
+                            <i class="fa fa-user"></i>
+                            <span>Mon Profil</span>
+                            </a>
                         </div>
                     </form>
                 </div>
