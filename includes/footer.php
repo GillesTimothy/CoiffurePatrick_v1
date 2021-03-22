@@ -4,10 +4,10 @@
                 <div class="col-sm-6 col-md-3">
                     <h4>Pages</h4>
                     <ul>
-                        <li><a href="panier.php">Mon Panier</a></li>
-                        <li><a href="contact.php">Contactez-Nous</a></li>
+                        <li><a href="contact.php">Rendez-vous</a></li>
                         <li><a href="boutique.php">Boutique</a></li>
                         <li><a href="checkout.php">Mon Compte</a></li>
+                        <li><a href="checkout.php">Contact</a></li>
                     </ul>
                     <hr>
                     <h4>Section Utilisateur</h4>
@@ -22,9 +22,9 @@
                 <div class="col-sm-6 col-md-3">
                     <h4>Top Produits Catégories</h4>
                     <ul>
-                        <li><a href="#">Savons</a></li>
-                        <li><a href="#">Brosses</a></li>
                         <li><a href="#">Cheveux</a></li>
+                        <li><a href="#">Brosses</a></li>
+                        <li><a href="#">Shampoings</a></li>
                         <li><a href="#">Autres</a></li>
                     </ul>
                     <hr>
@@ -58,7 +58,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" name="email">
                             <span class="input-group-btn">
-                                <input type="submit" value="subscribe" class="btn btn-default">
+                                <input type="submit" value="newsletter" class="btn btn-default">
                             </span>
                         </div>
                     </form>

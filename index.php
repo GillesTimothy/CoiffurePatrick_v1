@@ -32,6 +32,8 @@
 
     <?php include 'components/service_storefront.php'; ?>
 
+    <?php include 'components/rdv_storefront.php'; ?>
+
     <?php include 'components/product_storefront.php'; ?>
     
     <?php include 'components/open_hour.php'; ?>
