@@ -8,6 +8,7 @@
             <li><a href="#">Brosses</a></li>
             <li><a href="#">Shampoings</a></li>
             <li><a href="#">Autres</a></li>
+            <li><a href="#">Choses</a></li>
         </ul>
 
     </div>
@@ -22,6 +23,7 @@
             <li><a href="#">Femmes</a></li>
             <li><a href="#">Enfants</a></li>
             <li><a href="#">Autres</a></li>
+            <li><a href="#">Choses</a></li>
         </ul>
 
     </div>
