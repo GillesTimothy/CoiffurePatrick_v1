@@ -10,7 +10,7 @@
 
 <div id="content" class="container">
         <div class="row">
-            <div class="col-sm-6 single">
+            <div class="col-md-3 single">
                 <div class="product">
                     <a href="details.php">
                         <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 single">
+            <div class="col-md-3 single">
                 <div class="product">
                     <a href="details.php">
                         <img class="img-responsive" src="admin_area/product_images/produit2.jpg" alt="produit2">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 single">
+            <div class="col-md-3 single">
                 <div class="product">
                     <a href="details.php">
                         <img class="img-responsive" src="admin_area/product_images/produit3.jpg" alt="produit3">
@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>  
-            <div class="col-sm-6 single">
+            <div class="col-md-3 single">
                 <div class="product">
                     <a href="details.php">
                         <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit4">

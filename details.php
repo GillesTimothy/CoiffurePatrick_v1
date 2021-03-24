@@ -32,7 +32,8 @@
                     <li>
                         <a href="index.php">Accueil</a>
                     </li>
-                    <li>Boutique</li>
+                    <li><a href="boutique.php">Boutique</a></li>
+                    <li>détails</li>
                 </ul>
             </div>
             <div class="col-md-3">

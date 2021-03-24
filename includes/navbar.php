@@ -11,7 +11,7 @@
                 </button>
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#search">
                     <span class="sr-only">Toggle Navigation</span>
-                    <i class="fa fa-search"></i>
+                    <i class="fa fa-user"></i>
                 </button>
             </div>
 
