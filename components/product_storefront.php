@@ -70,7 +70,7 @@
             <div class="col-md-3 single">
                 <div class="product">
                     <a href="details.php">
-                        <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit4">
+                        <img class="img-responsive" src="admin_area/product_images/produit4.jpg" alt="produit4">
                     </a>
                     <div class="text">
                         <h3>

@@ -33,7 +33,7 @@
                         <a href="index.php">Accueil</a>
                     </li>
                     <li><a href="boutique.php">Boutique</a></li>
-                    <li>détails</li>
+                    <li>Détails</li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -111,18 +111,18 @@
 
                         <div class="row" id="thumbs">
                             <div class="col-xs-4">
-                                <a href="#" class="thumb">
-                                    <img src="admin_area/product_images/produit2.jpg" alt="produit2" class="img-responsive">
+                                <a data-target="#myCarousel" data-slide-to="0" href="#" class="thumb">
+                                    <img src="admin_area/product_images/produit1a.jpg" alt="produit1 a" class="img-responsive">
                                 </a>
                             </div>
                             <div class="col-xs-4">
-                                <a href="#" class="thumb">
-                                    <img src="admin_area/product_images/produit3.jpg" alt="produit2" class="img-responsive">
+                                <a data-target="#myCarousel" data-slide-to="1" href="#" class="thumb">
+                                    <img src="admin_area/product_images/produit1b.jpg" alt="produit1 b" class="img-responsive">
                                 </a>
                             </div>
                             <div class="col-xs-4">
-                                <a href="#" class="thumb">
-                                    <img src="admin_area/product_images/produit1.jpg" alt="produit2" class="img-responsive">
+                                <a data-target="#myCarousel" data-slide-to="2" href="#" class="thumb">
+                                    <img src="admin_area/product_images/produit1c.jpg" alt="produit11 c" class="img-responsive">
                                 </a>
                             </div>
                         </div>

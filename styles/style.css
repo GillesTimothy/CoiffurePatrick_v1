@@ -371,3 +371,33 @@ body {
     box-shadow: 0px 1px 5px rgba(0, 0, 0, .5);
     border: 2px solid transparent;
 }
+
+
+/* MON PANIER STYLE */
+#content #panier .table tbody tr td img {
+    width: 50px;
+    float: left;
+}
+#content #panier .table tbody tr td input {
+    width: 50px;
+    float: left;
+}
+#content #panier .table tbody tr td {
+    vertical-align: middle;
+}
+#content #panier .table tfoot {
+    font-size: 18px;
+}
+.box .box-footer {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #eeeeee;
+}
+.box .box-footer:before, 
+.box .box-footer:after {
+    content: "";
+    display: table;
+}
+.box .box-footer:after {
+    clear: both;
+}
