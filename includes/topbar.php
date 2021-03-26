@@ -14,8 +14,8 @@
                         <a href="checkout.php">Connexion</a>
                     </li>
                     <li>
-                        <a href="contacteznous.php">Contactez-nous</a>
-                        <a href="contacteznous.php"><i class="fa fa-info-circle"></i></a>
+                        <a href="contact.php">Contactez-nous</a>
+                        <a href="contact.php"><i class="fa fa-info-circle"></i></a>
                     </li>
                 </ul>
             </div>

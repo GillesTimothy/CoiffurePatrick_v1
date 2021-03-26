@@ -28,5 +28,3 @@
 
     </div>
 </div>
-
-<!-- 18 MIN 19 SECONDES -->

@@ -7,7 +7,7 @@
                         <li><a href="contact.php">Rendez-vous</a></li>
                         <li><a href="boutique.php">Boutique</a></li>
                         <li><a href="checkout.php">Mon Compte</a></li>
-                        <li><a href="checkout.php">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                     <hr>
                     <h4>Section Utilisateur</h4>
