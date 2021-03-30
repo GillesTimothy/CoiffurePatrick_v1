@@ -1,7 +1,7 @@
 <div id="navbar" class="navbar navbar-default fixed">
         <div class="container">
             <div class="navbar-header">
-                <a href="index.php" class="navbar-brand home">
+                <a href="../index.php" class="navbar-brand home">
                     <img src="images/coiffurePatrick_125x49.png" alt="logo" class="hidden-xs">
                     <img src="images/coiffurePatrick_83x33.png" alt="logo mobile" class="visible-xs">
                 </a>

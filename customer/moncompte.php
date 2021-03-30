@@ -40,6 +40,19 @@
             <?php include 'includes/sidebar_moncompte.php'; ?>
             
             </div>
+
+            <div  class="col-md-9">
+                <div class="box">
+                    <?php if(isset($_GET['mes_commandes'])) {
+                        include("components/mes_commandes.php");
+                    } ?>
+
+                    <?php if(isset($_GET['mes_rdv'])) {
+                        include("components/mes_rdv.php");
+                    } ?>
+
+                </div>
+            </div>
         </div>
     </div>
 
