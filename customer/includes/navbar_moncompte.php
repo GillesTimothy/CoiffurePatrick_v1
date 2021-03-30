@@ -19,21 +19,21 @@
                 <div class="padding-nav">
                     <ul class="nav navbar-nav left">
                         <li>
-                            <a href="index.php">Accueil</a>
+                            <a href="../index.php">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="../rdv.php">Rendez-Vous</a>
+                        </li>
+                        <li>
+                            <a href="../boutique.php">Boutique</a>
                         </li>
                         <li class="active">
-                            <a href="rdv.php">Rendez-Vous</a>
-                        </li>
-                        <li>
-                            <a href="boutique.php">Boutique</a>
-                        </li>
-                        <li>
-                            <a href="customer/moncompte.php">Mon Compte</a>
+                            <a href="moncompte.php">Mon Compte</a>
                         </li>
                     </ul>
                 </div>
 
-                <a href="panier.php" class="btn navbar-btn btn-primary right">
+                <a href="../panier.php" class="btn navbar-btn btn-primary right">
                     <i class="fa fa-shopping-cart"></i>
                     <span>4 - Mon Panier </span>
                 </a>
@@ -53,21 +53,22 @@
                             <i class="fa fa-sign-out"></i>
                             <span>Deconnexion</span>
                             </a>
-                            
-                            <a href="customer/moncompte.php?mes_rdv" class="btn navbar-btn btn-primary right">
+
+                            <a href="moncompte.php?mes_rdv" class="btn navbar-btn btn-primary right">
                             <i class="fa fa-user"></i>
                             <span>Mes Rendez-vous</span>
                             </a>
 
-                            <a href="customer/moncompte.php?mes_commandes" class="btn navbar-btn btn-primary right">
+                            <a href="moncompte.php?mes_commandes" class="btn navbar-btn btn-primary right">
                             <i class="fa fa-user"></i>
                             <span>Mes commandes</span>
                             </a>
 
-                            <a href="customer/moncompte.php" class="btn navbar-btn btn-primary right">
+                            <a href="moncompte.php" class="btn navbar-btn btn-primary right">
                             <i class="fa fa-user"></i>
                             <span>Mon Profil</span>
                             </a>
+
                         </div>
                     </form>
                 </div>

@@ -28,7 +28,7 @@
                             <a href="boutique.php">Boutique</a>
                         </li>
                         <li>
-                            <a href="checkout.php">Mon Compte</a>
+                            <a href="customer/moncompte.php">Mon Compte</a>
                         </li>
                     </ul>
                 </div>
@@ -49,17 +49,22 @@
                     <form method="get" action="results.php" class="navbar-form">
                         <div class="input-group">
 
-                            <a href="panier.php" class="btn navbar-btn btn-primary right">
+                            <a href="deconnexion.php" class="btn navbar-btn btn-primary right">
+                            <i class="fa fa-sign-out"></i>
+                            <span>Deconnexion</span>
+                            </a>
+
+                            <a href="customer/moncompte.php?mes_rdv" class="btn navbar-btn btn-primary right">
                             <i class="fa fa-user"></i>
                             <span>Mes Rendez-vous</span>
                             </a>
 
-                            <a href="panier.php" class="btn navbar-btn btn-primary right">
+                            <a href="customer/moncompte.php?mes_commandes" class="btn navbar-btn btn-primary right">
                             <i class="fa fa-user"></i>
                             <span>Mes commandes</span>
                             </a>
 
-                            <a href="panier.php" class="btn navbar-btn btn-primary right">
+                            <a href="customer/moncompte.php" class="btn navbar-btn btn-primary right">
                             <i class="fa fa-user"></i>
                             <span>Mon Profil</span>
                             </a>

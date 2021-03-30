@@ -4,16 +4,16 @@
                 <div class="col-sm-6 col-md-3">
                     <h4>Pages</h4>
                     <ul>
-                        <li><a href="contact.php">Rendez-vous</a></li>
-                        <li><a href="boutique.php">Boutique</a></li>
-                        <li><a href="customer/moncompte.php">Mon Compte</a></li>
-                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="../contact.php">Rendez-vous</a></li>
+                        <li><a href="../boutique.php">Boutique</a></li>
+                        <li><a href="moncompte.php">Mon Compte</a></li>
+                        <li><a href="../contact.php">Contact</a></li>
                     </ul>
                     <hr>
                     <h4>Section Utilisateur</h4>
                     <ul>
-                        <li><a href="connexion.php">Connexion</a></li>
-                        <li><a href="inscription.php">Inscription</a></li>
+                        <li><a href="../connexion.php">Connexion</a></li>
+                        <li><a href="../inscription.php">Inscription</a></li>
                     </ul>
                     <hr class="hidden-md hidden-lg hidden-sm">
                     
@@ -30,7 +30,7 @@
                     <hr>
                     <h4>Rendez-Vous</h4>
                     <ul>
-                        <li><a href="rdv.php">Prendre Rendez-Vous</a></li>
+                        <li><a href="../rdv.php">Prendre Rendez-Vous</a></li>
                     </ul>
                     <hr class="hidden-md hidden-lg">    
                 </div>
@@ -44,7 +44,7 @@
                         <br/>Belgique
                         <br/>010 24 61 66
                     </p>
-                    <a href="contact.php">Page de Contact</a>
+                    <a href="../contact.php">Page de Contact</a>
                     <hr class="hidden-md hidden-lg">    
                 </div>
 
