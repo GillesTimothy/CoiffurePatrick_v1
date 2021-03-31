@@ -6,7 +6,7 @@
                     <ul>
                         <li><a href="../contact.php">Rendez-vous</a></li>
                         <li><a href="../boutique.php">Boutique</a></li>
-                        <li><a href="moncompte.php">Mon Compte</a></li>
+                        <li><a href="moncompte.php?mes_informations">Mon Compte</a></li>
                         <li><a href="../contact.php">Contact</a></li>
                     </ul>
                     <hr>

@@ -28,7 +28,7 @@
                             <a href="boutique.php">Boutique</a>
                         </li>
                         <li>
-                            <a href="customer/moncompte.php">Mon Compte</a>
+                            <a href="customer/moncompte.php?mes_informations">Mon Compte</a>
                         </li>
                     </ul>
                 </div>
@@ -64,7 +64,7 @@
                             <span>Mes commandes</span>
                             </a>
 
-                            <a href="customer/moncompte.php" class="btn navbar-btn btn-primary right">
+                            <a href="customer/moncompte.php?mes_informations" class="btn navbar-btn btn-primary right">
                             <i class="fa fa-user"></i>
                             <span>Mon Profil</span>
                             </a>

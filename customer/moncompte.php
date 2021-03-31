@@ -51,6 +51,21 @@
                         include("components/mes_rdv.php");
                     } ?>
 
+                    <?php if(isset($_GET['modif_info'])) {
+                        include("components/modif_info.php");
+                    } ?>
+
+                    <?php if(isset($_GET['mes_informations'])) {
+                        include("components/mes_informations.php");
+                    } ?>
+
+                    <?php if(isset($_GET['change_mdp'])) {
+                        include("components/change_mdp.php");
+                    } ?>
+
+                    <?php if(isset($_GET['supp_compte'])) {
+                        include("components/supp_compte.php");
+                    } ?>
                 </div>
             </div>
         </div>

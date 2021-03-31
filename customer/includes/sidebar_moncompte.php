@@ -46,3 +46,15 @@
             </ul>
     </div>
 </div>
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-body">
+        <ul class="nav-pills nav-stacked nav">
+            <li class="<?php if(isset($_GET['supp_compte'])){ echo "active"; } ?>">
+                <a href="moncompte.php?supp_compte">
+                <i class="fa fa-trash"></i> Supprimer Mon Compte</a>
+            </li>
+        </ul>
+    </div>
+</div>
