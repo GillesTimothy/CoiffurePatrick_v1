@@ -5,6 +5,7 @@
     </p>
     <p class="text-muted">Les rendez-vous et commande en cours ou futures seront des lors annulées!
     </p>
+   
     
 
 <br>

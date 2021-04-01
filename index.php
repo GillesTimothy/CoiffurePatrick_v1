@@ -1,3 +1,7 @@
+<?php
+    include("includes/db.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +21,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-
 </head>
 <body>
 
