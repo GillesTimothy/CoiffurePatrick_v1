@@ -3,7 +3,7 @@
             <div class="col-md-6 offer">
                 <a href="#" class="btn btn-success btn-sm">Bienvenue</a>
                 <a href="panier.php">Panier : 4  -  Prix Total : 300€  </a>
-                <a href="moncompte.php?mes_rdv">|  Rendez-Vous : 2</a>
+                <a href="customer/moncompte.php?mes_rdv">|  Rendez-Vous : 2</a>
             </div>
             <div class="col-md-6">
                 <ul class="menu">

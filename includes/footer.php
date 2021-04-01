@@ -4,7 +4,7 @@
                 <div class="col-sm-6 col-md-3">
                     <h4>Pages</h4>
                     <ul>
-                        <li><a href="contact.php">Rendez-vous</a></li>
+                        <li><a href="rdv.php?form_rdv">Rendez-vous</a></li>
                         <li><a href="boutique.php">Boutique</a></li>
                         <li><a href="customer/moncompte.php?mes_informations">Mon Compte</a></li>
                         <li><a href="contact.php">Contact</a></li>

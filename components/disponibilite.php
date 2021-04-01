@@ -1,10 +1,31 @@
-<div id="hot">
-        <div class="box">  
-                <div class="container">
-                    <div class="col-md-12">
-                        <h2>Nos disponiblité !</h2>
-                        <p> Selectionner le rendez-vous que vous désirer.</p>
-                    </div>    
+<div id="content">
+        <div class="container">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="index.php">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="rdv.php?form_rdv">Rendez-Vous</a>
+                    </li>
+                    <li>Disponibilité</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+
+            <?php include 'components/sidebar_rdv.php'; ?>
+            
+            </div>
+
+            <div class="col-md-9">
+                <div class="box">
+                    <div class="box-header">
+                        <center>
+                        <h2>Nos Disponibilités</h2>
+                        <p class="text-muted">
+                        Selectionner le rendez-vous que vous désirer.
+                        </p>
+                        </center>
                         <form action="rdv.php" method="post">    
                                     
                                     <input type="radio" id="rdv1" name="rdv" value="vendredi 13 avril 2021 - 13h24" checked>
@@ -26,8 +47,10 @@
                                 </div>
                                 
                         </form>
-
-                    
-                </div> 
+                    </div>
+                </div>
             </div>
-        </div> 
+        
+        </div>
+</div>
+

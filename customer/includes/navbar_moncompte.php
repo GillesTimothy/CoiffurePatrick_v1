@@ -22,7 +22,7 @@
                             <a href="../index.php">Accueil</a>
                         </li>
                         <li>
-                            <a href="../rdv.php">Rendez-Vous</a>
+                            <a href="../rdv.php?form_rdv">Rendez-Vous</a>
                         </li>
                         <li>
                             <a href="../boutique.php">Boutique</a>
