@@ -50,7 +50,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Commentaire</label>
-                                <textarea name="message" class="form-control" rows="5" cols="33"></textarea>
+                                <textarea name="message" class="form-control" rows="5" cols="33" style="resize:none"></textarea>
                             </div>
                         </form>
                         <div class=text-right>
