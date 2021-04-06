@@ -1,3 +1,6 @@
+<?php
+   $con = mysqli_connect("localhost","root","","testcoiffurepatrick");
+?>
 <div id="footer">
         <div class="container">
             <div class="row">
@@ -22,10 +25,27 @@
                 <div class="col-sm-6 col-md-3">
                     <h4>Top Produits Catégories</h4>
                     <ul>
-                        <li><a href="#">Cheveux</a></li>
-                        <li><a href="#">Brosses</a></li>
-                        <li><a href="#">Shampoings</a></li>
-                        <li><a href="#">Autres</a></li>
+                        
+                        <?php 
+                            $get_productCat = "select * from  categorie_produit";
+                            $run_productCat = mysqli_query($con,$get_productCat);
+                            while($row_productCat = mysqli_fetch_array($run_productCat)) {
+
+                                $produitCat_id = $row_productCat['idCategorie'];
+                                $produitCat_libelle = $row_productCat['libelle'];
+                                
+                        
+                                echo "
+                                    <li>
+                                        <a href='boutique.php/pCat_id=$produitCat_id'>
+                                            $produitCat_libelle
+                                        </a>
+                                    </li>
+                                ";    
+                        
+                            }
+                        ?>
+
                     </ul>
                     <hr>
                     <h4>Rendez-Vous</h4>
