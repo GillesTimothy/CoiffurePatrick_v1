@@ -1,4 +1,5 @@
 <?php
+    $active='';
     include("includes/db.php");
     include("functions/functions.php");
 ?>

@@ -1,6 +1,9 @@
 <?php
+
+    $active='RDV';  //variable pour navbar 
     include("includes/db.php");
     include("functions/functions.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +32,7 @@
 
     <?php include 'includes/topbar.php'; ?>
 
-    <?php include 'includes/navbar_rdv.php'; ?>
+    <?php include 'includes/navbar.php'; ?>
 
     <?php if(isset($_GET['form_rdv'])) {
         include("components/form_rdv.php");

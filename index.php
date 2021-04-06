@@ -1,6 +1,9 @@
 <?php
+    
+    $active='Accueil';  //variable pour navbar 
     include("includes/db.php");
     include("functions/functions.php");
+    
 ?>
 
 <!DOCTYPE html>

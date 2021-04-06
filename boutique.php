@@ -1,6 +1,9 @@
 <?php
+
+    $active='Boutique';  //variable pour navbar 
     include("includes/db.php");
     include("functions/functions.php");
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +30,7 @@
 
     <?php include 'includes/topbar.php'; ?>
 
-    <?php include 'includes/navbar_boutique.php'; ?>
+    <?php include 'includes/navbar.php'; ?>
 
     <div id="content">
         <div class="container">

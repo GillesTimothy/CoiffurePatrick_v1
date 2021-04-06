@@ -1,4 +1,5 @@
 <?php
+    $active="Boutique";
     include("includes/db.php");
     include("functions/functions.php");
 ?>
@@ -27,7 +28,7 @@
 
     <?php include 'includes/topbar.php'; ?>
 
-    <?php include 'includes/navbar_boutique.php'; ?>
+    <?php include 'includes/navbar.php'; ?>
 
     <div id="content">
         <div class="container">

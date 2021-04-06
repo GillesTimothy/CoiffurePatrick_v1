@@ -18,13 +18,13 @@
             <div class="navbar-collapse collapse" id="navigation">
                 <div class="padding-nav">
                     <ul class="nav navbar-nav left">
-                        <li class="active">
+                        <li class="<?php if($active=='Accueil') echo 'active' ?>">
                             <a href="index.php">Accueil</a>
                         </li>
-                        <li>
+                        <li class="<?php if($active=='RDV') echo 'active' ?>">
                             <a href="rdv.php?form_rdv">Rendez-Vous</a>
                         </li>
-                        <li>
+                        <li class="<?php if($active=='Boutique') echo 'active' ?>">
                             <a href="boutique.php">Boutique</a>
                         </li>
                         <li>
