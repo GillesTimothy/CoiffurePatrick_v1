@@ -3,7 +3,7 @@
     $active='Boutique';  //variable pour navbar 
     include("includes/db.php");
     include("functions/functions.php");
-    
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,185 +54,89 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima id, perspiciatis ipsum earum ex expedita aperiam rem saepe necessitatibus officia incidunt autem pariatur officiis facere harum voluptates ducimus assumenda?</p>                    
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-4 center-reponsive">
-                        <div class="product">
-                            <a href="details.php">
-                                <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Coiffure Patrick fruit 1</a>   
-                                </h3>
-                                <p class="price">10 €</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">Voir Détails</a>
-                                    <a href="details.php" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart"> Ajouter au panier</i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 center-reponsive">
-                        <div class="product">
-                            <a href="details.php">
-                                <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Coiffure Patrick fruit 1</a>   
-                                </h3>
-                                <p class="price">10 €</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">Voir Détails</a>
-                                    <a href="details.php" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart"> Ajouter au panier</i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 center-reponsive">
-                        <div class="product">
-                            <a href="details.php">
-                                <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Coiffure Patrick fruit 1</a>   
-                                </h3>
-                                <p class="price">10 €</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">Voir Détails</a>
-                                    <a href="details.php" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart"> Ajouter au panier</i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 center-reponsive">
-                        <div class="product">
-                            <a href="details.php">
-                                <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Coiffure Patrick fruit 1</a>   
-                                </h3>
-                                <p class="price">10 €</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">Voir Détails</a>
-                                    <a href="details.php" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart"> Ajouter au panier</i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 center-reponsive">
-                        <div class="product">
-                            <a href="details.php">
-                                <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Coiffure Patrick fruit 1</a>   
-                                </h3>
-                                <p class="price">10 €</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">Voir Détails</a>
-                                    <a href="details.php" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart"> Ajouter au panier</i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 center-reponsive">
-                        <div class="product">
-                            <a href="details.php">
-                                <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Coiffure Patrick fruit 1</a>   
-                                </h3>
-                                <p class="price">10 €</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">Voir Détails</a>
-                                    <a href="details.php" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart"> Ajouter au panier</i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 center-reponsive">
-                        <div class="product">
-                            <a href="details.php">
-                                <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Coiffure Patrick fruit 1</a>   
-                                </h3>
-                                <p class="price">10 €</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">Voir Détails</a>
-                                    <a href="details.php" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart"> Ajouter au panier</i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 center-reponsive">
-                        <div class="product">
-                            <a href="details.php">
-                                <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Coiffure Patrick fruit 1</a>   
-                                </h3>
-                                <p class="price">10 €</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">Voir Détails</a>
-                                    <a href="details.php" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart"> Ajouter au panier</i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 center-reponsive">
-                        <div class="product">
-                            <a href="details.php">
-                                <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit1">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Coiffure Patrick fruit 1</a>   
-                                </h3>
-                                <p class="price">10 €</p>
-                                <p class="button">
-                                    <a href="details.php" class="btn btn-default">Voir Détails</a>
-                                    <a href="details.php" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart"> Ajouter au panier</i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
+                    <?php 
+                        if(!isset($_GET['pCat_id'])){
+                            if(!isset($_GET['cat_id'])){
+
+                                    $nbr_article = 6;
+
+                                    if(isset($_GET['page'])){
+
+                                        $page = $_GET['page'];
+
+                                    }else {
+                                            $page=1;
+                                        }
+
+                                    $start_from = ($page - 1) * $nbr_article;
+                                    $get_products = "select * from produits order by 1 DESC LIMIT $start_from,$nbr_article";
+                                    $run_products = mysqli_query($db, $get_products);
+                                    while($row_products = mysqli_fetch_array($run_products)) {
+
+                                        $produit_id = $row_products['idProduit'];
+                                        $produit_libelle = $row_products['libelle'];
+                                        $produit_prix = $row_products['prix'];
+                                        $produit_img1 = $row_products['produitImage1'];
+                                        echo "
+                                            <div class='col-md-4 col-sm-4 center-reponsive'>
+                                                <div class='product'>
+                                                    <a href='details.php?pro_id=$produit_id'>
+                                                        <img class='img-responsive' src='admin_area/product_images/$produit_img1'>
+                                                    </a>
+                                                    <div class='text'>
+                                                        <h3>
+                                                            <a href='details.php?pro_id=$produit_id'>$produit_libelle</a>   
+                                                        </h3>
+                                                        <p class='price'>$produit_prix €</p>
+                                                        <p class='button'>
+                                                            <a href='details.php' class='btn btn-default'>Voir Détails</a>
+                                                            <a href='details.php' class='btn btn-primary'>
+                                                                <i class='fa fa-shopping-cart'> Ajouter au panier</i>
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ";
+                                        
+                                    }
+    
+                    ?>
+
                 </div>
+
                 <center>
                     <ul class="pagination">
-                        <li><a href="#"><span>&laquo</span></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">&raquo</a></li>
+
+                        <?php 
+                            $query = "select * from produits";
+                            $result= mysqli_query($con,$query);
+                            $total_record = mysqli_num_rows($result);
+                            $total_pages = ceil($total_record / $nbr_article);
+
+                                echo "
+
+                                    <li><a href='boutique.php?page=1'><span>&laquo</span></a></li>
+                                
+                                ";
+                                for($i=1; $i<=$total_pages; $i++){
+                                    echo "
+
+                                        <li><a href='boutique.php?page=".$i."'>".$i."</a></li>
+
+                                    ";
+                                };
+                                echo "
+
+                                    <li><a href='boutique.php?page=$total_pages'><span>&raquo</span></a></li>
+                                
+                                ";
+                            }
+                        }    
+                        
+                        ?>
+
                     </ul>
                 </center>
             </div>
