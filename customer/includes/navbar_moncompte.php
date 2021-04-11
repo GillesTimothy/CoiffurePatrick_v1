@@ -33,13 +33,13 @@
                     </ul>
                 </div>
 
-                <a href="../panier.php" class="btn navbar-btn btn-primary right">
+                <a href="../panier.php" id="btn-primary" class="btn navbar-btn right">
                     <i class="fa fa-shopping-cart"></i>
                     <span>4 - Mon Panier </span>
                 </a>
 
                 <div class="navbar-collapse collapse right">
-                    <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search">
+                    <button class="btn navbar-btn" id="btn-primary" type="button" data-toggle="collapse" data-target="#search">
                         <span class="sr-only">Toggle Search</span>
                         <i class="fa fa-user"></i>
                     </button>
@@ -49,22 +49,22 @@
                     <form method="get" action="results.php" class="navbar-form">
                         <div class="input-group">
 
-                            <a href="deconnexion.php" class="btn navbar-btn btn-primary right">
+                            <a href="deconnexion.php" id="btn-primary" class="btn navbar-btn right">
                             <i class="fa fa-sign-out"></i>
                             <span>Deconnexion</span>
                             </a>
 
-                            <a href="moncompte.php?mes_rdv" class="btn navbar-btn btn-primary right">
+                            <a href="moncompte.php?mes_rdv" id="btn-primary" class="btn navbar-btn right">
                             <i class="fa fa-user"></i>
                             <span>Mes Rendez-vous</span>
                             </a>
 
-                            <a href="moncompte.php?mes_commandes" class="btn navbar-btn btn-primary right">
+                            <a href="moncompte.php?mes_commandes" id="btn-primary" class="btn navbar-btn right">
                             <i class="fa fa-user"></i>
                             <span>Mes commandes</span>
                             </a>
 
-                            <a href="moncompte.php?mes_informations" class="btn navbar-btn btn-primary right">
+                            <a href="moncompte.php?mes_informations" id="btn-primary" class="btn navbar-btn right">
                             <i class="fa fa-user"></i>
                             <span>Mon Profil</span>
                             </a>

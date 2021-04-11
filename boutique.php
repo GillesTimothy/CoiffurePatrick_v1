@@ -139,6 +139,9 @@
 
                     </ul>
                 </center>
+                
+                    <?php getCatPro(); ?>
+                
             </div>
 
         </div>

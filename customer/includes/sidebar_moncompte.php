@@ -9,15 +9,15 @@
     
     <div class="panel-body">
         <ul class="nav-pills nav-stacked nav">
-            <li class="<?php if(isset($_GET['mes_informations'])){ echo "active"; } ?>">
+            <li id="<?php if(isset($_GET['mes_informations'])){ echo "active"; } ?>">
                 <a href="moncompte.php?mes_informations">
                 <i class="fa fa-info-circle"></i> Mes informations</a>
             </li>
-            <li class="<?php if(isset($_GET['mes_commandes'])){ echo "active"; } ?>">
+            <li id="<?php if(isset($_GET['mes_commandes'])){ echo "active"; } ?>">
                 <a href="moncompte.php?mes_commandes">
                 <i class="fa fa-list"></i> Mes Commandes</a>
             </li>
-            <li class="<?php if(isset($_GET['mes_rdv'])){ echo "active"; } ?>">
+            <li id="<?php if(isset($_GET['mes_rdv'])){ echo "active"; } ?>">
                 <a href="moncompte.php?mes_rdv">
                 <i class="fa fa-calendar"></i> Mes Rendez-Vous</a>
             </li>
@@ -31,11 +31,11 @@
     </div>
     <div class="panel-body">
         <ul class="nav-pills nav-stacked nav">
-            <li class="<?php if(isset($_GET['modif_info'])){ echo "active"; } ?>">
+            <li id="<?php if(isset($_GET['modif_info'])){ echo "active"; } ?>">
                 <a href="moncompte.php?modif_info">
                 <i class="fa fa-exchange"></i> Modifier mes Informations</a>
             </li>
-            <li class="<?php if(isset($_GET['change_mdp'])){ echo "active"; } ?>">
+            <li id="<?php if(isset($_GET['change_mdp'])){ echo "active"; } ?>">
                 <a href="moncompte.php?change_mdp">
                 <i class="fa fa-lock"></i> Changer votre MDP</a>
             </li>
@@ -51,7 +51,7 @@
 
     <div class="panel-body">
         <ul class="nav-pills nav-stacked nav">
-            <li class="<?php if(isset($_GET['supp_compte'])){ echo "active"; } ?>">
+            <li id="<?php if(isset($_GET['supp_compte'])){ echo "active"; } ?>">
                 <a href="moncompte.php?supp_compte">
                 <i class="fa fa-trash"></i> Supprimer Mon Compte</a>
             </li>

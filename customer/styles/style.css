@@ -404,7 +404,13 @@ body {
 
 
 /* MON COMPTE STYLE */
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+.nav-pills>li#active>a, .nav-pills>li#active>a:focus, .nav-pills>li#active>a:hover {
+    color: #fff;
+    background-color: #858585;
+}
+
+/* BOUTON GRIS */
+#btn-primary {
     color: #fff;
     background-color: #858585;
 }

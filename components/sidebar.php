@@ -13,7 +13,7 @@
                         $produitCat_libelle = $row_productCat['libelle'];
                         echo "
                             <li>
-                                <a href='boutique.php/pCat_id=$produitCat_id'>
+                                <a href='boutique.php?pCat_id=$produitCat_id'>
                                     $produitCat_libelle
                                 </a>
                             </li>
@@ -40,7 +40,7 @@
                             $cat_libelle = $row_cat['libelle'];       
                             echo "
                                 <li>
-                                    <a href='boutique.php/cat_id=$cat_id'>
+                                    <a href='boutique.php?cat_id=$cat_id'>
                                         $cat_libelle
                                     </a>
                                 </li>
