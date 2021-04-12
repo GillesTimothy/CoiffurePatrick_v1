@@ -90,8 +90,8 @@
                                                         </h3>
                                                         <p class='price'>$produit_prix €</p>
                                                         <p class='button'>
-                                                            <a href='details.php' class='btn btn-default'>Voir Détails</a>
-                                                            <a href='details.php' class='btn btn-primary'>
+                                                            <a href='details.php?pro_id=$produit_id' class='btn btn-default'>Voir Détails</a>
+                                                            <a href='details.php?pro_id=$produit_id' class='btn btn-primary'>
                                                                 <i class='fa fa-shopping-cart'> Ajouter au panier</i>
                                                             </a>
                                                         </p>
@@ -140,7 +140,10 @@
                     </ul>
                 </center>
                 
-                    <?php getCatPro(); ?>
+                <?php
+                    getpCatPro();
+                    getCatPro();
+                ?>
                 
             </div>
 

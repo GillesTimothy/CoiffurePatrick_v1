@@ -2,7 +2,32 @@
     $active="Boutique";
     include("includes/db.php");
     include("functions/functions.php");
+    $con = mysqli_connect("localhost","root","","testcoiffurepatrick");
 ?>
+
+<?php 
+            
+    if(isset($_GET['pro_id'])){
+        $produit_id = $_GET['pro_id'];
+        $get_produit = "select * from produits where idProduit = '$produit_id' ";
+        $run_produit = mysqli_query($con, $get_produit);
+        $row_produit = mysqli_fetch_array($run_produit);
+        $produitCat_id = $row_produit['pCategorieId'];
+        $produit_libelle = $row_produit['libelle'];
+        $produit_prix = $row_produit['prix'];
+        $produit_desc = $row_produit['description'];
+        $produit_img1 = $row_produit['produitImage1'];
+        $produit_img2 = $row_produit['produitImage2'];
+        $produit_img3 = $row_produit['produitImage3'];
+
+        $get_pCategorie = "select * from categorie_produit where idCategorie = '$produitCat_id'";
+        $run_pCategorie = mysqli_query($con,$get_pCategorie);
+        $row_pCategorie = mysqli_fetch_array($run_pCategorie);
+        $pCategorie_libelle = $row_pCategorie['libelle'];
+    }              
+            
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,13 +85,13 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img src="admin_area/product_images/produit1a.jpg" alt="slide 1">
+                                        <img src="admin_area/product_images/<?php echo $produit_img1; ?>" alt="slide 1">
                                     </div>
                                     <div class="item">
-                                        <img src="admin_area/product_images/produit1b.jpg" alt="slide 2">
+                                        <img src="admin_area/product_images/<?php echo $produit_img2; ?>" alt="slide 2">
                                     </div> 
                                     <div class="item">
-                                        <img src="admin_area/product_images/produit1c.jpg" alt="slide 2">
+                                        <img src="admin_area/product_images/<?php echo $produit_img3; ?>" alt="slide 2">
                                     </div>
                                 </div>
 
@@ -84,12 +109,13 @@
 
                     <div class="col-sm-5">
                         <div class="box">
-                            <h1 class="text-center">Coiffure Patrick fruit 1</h1>
-                            <form action="details.php" class="form-horizontal" method="post">
+                            <h1 class="text-center"><?php echo $produit_libelle; ?></h1>
+                            <?php add_panier() ?>
+                            <form action="details.php?add_panier=<?php echo $produit_id; ?> " class="form-horizontal" method="post">
                                 <div class="form-group">
                                     <label for="" class="col-md-5 control-label">Quantité</label>
                                     <div class="col-md-7">
-                                        <select name="product_qty" id="" class="form-control">
+                                        <select name="produit_quantite" id="" class="form-control">
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
@@ -109,25 +135,25 @@
                                     
                                     </div>  
                                 </div>
-                                <p class="price">30 € 00</p>
-                                <p class="text-center button"><button class="btn btn-primary i fa fa-shopping-cart">Ajouter à mon panier</button></p> 
+                                <p class="price"><?php echo $produit_prix; ?> € </p>
+                                <p class="text-center button"><button class="btn btn-primary i fa fa-shopping-cart"> Ajouter à mon panier</button></p> 
                             </form>         
                         </div>
 
                         <div class="row" id="thumbs">
                             <div class="col-xs-4">
                                 <a data-target="#myCarousel" data-slide-to="0" href="#" class="thumb">
-                                    <img src="admin_area/product_images/produit1a.jpg" alt="produit1 a" class="img-responsive">
+                                    <img src="admin_area/product_images/<?php echo $produit_img1; ?>" alt="produit1 a" class="img-responsive">
                                 </a>
                             </div>
                             <div class="col-xs-4">
                                 <a data-target="#myCarousel" data-slide-to="1" href="#" class="thumb">
-                                    <img src="admin_area/product_images/produit1b.jpg" alt="produit1 b" class="img-responsive">
+                                    <img src="admin_area/product_images/<?php echo $produit_img2; ?>" alt="produit1 b" class="img-responsive">
                                 </a>
                             </div>
                             <div class="col-xs-4">
                                 <a data-target="#myCarousel" data-slide-to="2" href="#" class="thumb">
-                                    <img src="admin_area/product_images/produit1c.jpg" alt="produit11 c" class="img-responsive">
+                                    <img src="admin_area/product_images/<?php echo $produit_img3; ?>" alt="produit11 c" class="img-responsive">
                                 </a>
                             </div>
                         </div>
@@ -137,7 +163,7 @@
     
                 <div class="box" id="details">
                     <h4>Détails Produit</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores itaque minima nisi doloribus ex reprehenderit expedita eligendi dicta hic quos illum, distinctio architecto saepe, deserunt animi pariatur placeat consequatur non?</p>
+                    <p><?php echo $produit_desc; ?></p>
                     <h4>Caractéristiques</h4>
                     <ul>
                         <li>caractéristique 1</li>
