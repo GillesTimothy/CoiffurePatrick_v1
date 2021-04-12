@@ -24,6 +24,24 @@
         $run_pCategorie = mysqli_query($con,$get_pCategorie);
         $row_pCategorie = mysqli_fetch_array($run_pCategorie);
         $pCategorie_libelle = $row_pCategorie['libelle'];
+    }    
+    else if(isset($_GET['add_panier'])){
+        $produit_id = $_GET['add_panier'];
+        $get_produit = "select * from produits where idProduit = '$produit_id' ";
+        $run_produit = mysqli_query($con, $get_produit);
+        $row_produit = mysqli_fetch_array($run_produit);
+        $produitCat_id = $row_produit['pCategorieId'];
+        $produit_libelle = $row_produit['libelle'];
+        $produit_prix = $row_produit['prix'];
+        $produit_desc = $row_produit['description'];
+        $produit_img1 = $row_produit['produitImage1'];
+        $produit_img2 = $row_produit['produitImage2'];
+        $produit_img3 = $row_produit['produitImage3'];
+
+        $get_pCategorie = "select * from categorie_produit where idCategorie = '$produitCat_id'";
+        $run_pCategorie = mysqli_query($con,$get_pCategorie);
+        $row_pCategorie = mysqli_fetch_array($run_pCategorie);
+        $pCategorie_libelle = $row_pCategorie['libelle'];
     }              
             
 ?>
@@ -136,7 +154,7 @@
                                     </div>  
                                 </div>
                                 <p class="price"><?php echo $produit_prix; ?> € </p>
-                                <p class="text-center button"><button class="btn btn-primary i fa fa-shopping-cart"> Ajouter à mon panier</button></p> 
+                                <p class="text-center button"><button name="submit" type="submit" class="btn btn-primary i fa fa-shopping-cart"> Ajouter à mon panier</button></p> 
                             </form>         
                         </div>
 

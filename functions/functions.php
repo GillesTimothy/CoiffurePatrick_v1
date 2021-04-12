@@ -25,13 +25,19 @@ function add_panier() {
 
         $run_check = mysqli_query($db, $check_produit);
         if(mysqli_num_rows($run_check)>0){
-            echo "<script>alert('Le produit à déjà été ajouter au panier !')</script>";
-            echo "<script>window.open('details.php?pro_id=$produit_id', '_self')</script>";
-
-        } else {
-            $query = "insert into panier (produitId, ip_add, quantite) values ($produit_id, $ip_add, $produit_quantite)";
-            $run_query = mysqli_query($db, $query);
-            echo "<script>window.open('details.php?pro_id=$produit_id', '_self')</script>";
+            echo '<p style="color: red;"> Le produit a déjà été ajouté au panier ! </p>';
+        } 
+        else {
+        $query = "insert into panier (produitId, ip_add, quantite) values ($produit_id, '$ip_add', $produit_quantite)";
+        $run_query = mysqli_query($db, $query);
+        if($run_query) {
+            echo '<p style="color: green;"> Le produit a déjà été ajouté au panier ! </p>';
+            //echo "<script>alert('Le produit à bien été ajouter au panier !')</script>";
+            //echo "<script>window.open('details.php?pro_id=$produit_id', '_self')</script>";   
+        }
+        else {
+            echo 'fuck you ca marche pas l"ajout a la BDD';
+        }
         }
     }
 }
