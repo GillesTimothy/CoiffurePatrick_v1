@@ -49,7 +49,7 @@
                     <form method="get" action="results.php" class="navbar-form">
                         <div class="input-group">
 
-                            <a href="deconnexion.php" id="btn-primary" class="btn navbar-btn right">
+                            <a href="../deconnexion.php" id="btn-primary" class="btn navbar-btn right">
                             <i class="fa fa-sign-out"></i>
                             <span>Deconnexion</span>
                             </a>

@@ -52,6 +52,45 @@
                         <center>
                         <h2>Enregistrer un nouveau compte</h2>
                         </center>
+
+
+                        <?php
+ 
+                        if(isset($_POST['inscription'])){
+                            $mdp_identique = 0;
+
+                            $i_nom = $_POST['i_nom'];
+                            $i_prenom = $_POST['i_prenom'];
+                            $i_email = $_POST['i_email'];
+                            $i_adresse = $_POST['i_adresse'];
+                            $i_telephone = $_POST['i_telephone'];
+                            $i_mdp = $_POST['i_mdp'];
+                            $i_mdp_confirm = $_POST['i_mdp_confirm'];
+                            $ip_add = getRealIpUser();
+                            $mdp_hash = password_hash($i_mdp, PASSWORD_DEFAULT);
+
+                            if($i_mdp != $i_mdp_confirm){
+                                echo "<p style='color: red;'>mot de passe pas identique !<p>";
+                            }
+                            else {
+
+                                $insert_utilisateur = "insert into utilisateur (nom, prenom, email, telephone, mdp, adresse, ip_add) values ('$i_nom', '$i_prenom', '$i_email', '$i_telephone', '$mdp_hash', '$i_adresse', '$ip_add')";
+
+                                $run_utilisateur = mysqli_query($con, $insert_utilisateur);
+                                if($run_utilisateur) {
+                                    $_SESSION['utilisateur_email'] = $i_email;
+                                    $_SESSION['utilisateur_prenom'] = $i_prenom;
+                                    echo '<script>alert("inscription OK !")</script>';
+                                    echo '<script>window.open("connexion.php","_self")</script>';
+                                    
+                                }
+                            }
+                        }   
+
+                        ?>
+
+
+
                         <form action="inscription.php" method="post">
                             <div class="form-group">
                                 <label>Nom</label>
@@ -98,24 +137,3 @@
 
  </body>
  </html>  
-
- <?php
- 
-    if(isset($_POST['inscription'])){
-        $i_nom = $_POST['i_nom'];
-        $i_prenom = $_POST['i_prenom'];
-        $i_email = $_POST['i_email'];
-        $i_adresse = $_POST['i_adresse'];
-        $i_telephone = $_POST['i_telephone'];
-        $i_mdp = $_POST['i_mdp'];
-        $i_mdp_confirm = $_POST['i_mdp_confirm'];
-        $ip_add = getRealIpUser();
-
-        $insert_utilisateur = "insert into utilisateur (nom, prenom, email, telephone, mdp, adresse, ip_add) values ('$i_nom', '$i_prenom', '$i_email', '$i_telephone', '$i_mdp', '$i_adresse', '$ip_add')";
-
-        $run_utilisateur = mysqli_query($con, $insert_utilisateur);
-
-        
-    }    
-
- ?>

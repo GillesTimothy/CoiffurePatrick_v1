@@ -40,7 +40,7 @@
                 <i class="fa fa-lock"></i> Changer votre MDP</a>
             </li>
             <li>
-                <a href="deconnexion.php">
+                <a href="components/deconnexion.php">
                 <i class="fa fa-sign-out"></i> Deconnexion</a>
             </li>
             </ul>

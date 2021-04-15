@@ -13,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coiffure Patrick</title>
+    <link rel="icon" href="images/" type="image/x-icon" />
 
     <link rel="stylesheet" href="styles/bootstrap-337.min.css"> 
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
