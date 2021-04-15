@@ -46,7 +46,15 @@
                 <div class="box">
                     <form action="panier.php" method="post" enctype="multipart/form-data">
                         <h1>Mon Panier</h1>
-                        <p class="text-muted">Vous avez actuellement 4 objects dans votre panier</p>
+
+                        <?php 
+                            $ip_add = getRealIpUser();
+                            $get_panier = "select * from panier where ip_add = '$ip_add'";
+                            $run_panier = mysqli_query($con, $get_panier);
+                            $count = mysqli_num_rows($run_panier);
+                        ?>
+
+                        <p class="text-muted">Vous avez actuellement <?php echo $count; ?> object(s) dans votre panier</p>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -54,109 +62,62 @@
                                         <th class="col-md-4" colspan="2">Produit</th>
                                         <th>Quantité</th>
                                         <th>Prix Unitaire</th>
-                                        <th>Taille</th>
+                                        
                                         <th colspan="1">Supprimer</th>
                                         <th colspan="2">Sous-Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                <?php
+                                
+                                    $total = 0;
+                                    while($row_panier = mysqli_fetch_array($run_panier)){
+                                        $pro_id = $row_panier['produitId'];
+                                        $pro_quantite = $row_panier['quantite'];
+                                        $get_produit = "select * from produits where idProduit = '$pro_id' ";
+                                        $run_produit = mysqli_query($con, $get_produit);
+                                        while($row_produit = mysqli_fetch_array($run_produit)){
+                                            $produit_libelle = $row_produit['libelle'];
+                                            $produit_img1 = $row_produit['produitImage1'];
+                                            $produit_prix = $row_produit['prix'];
+                                            $sous_total = $row_produit['prix']*$pro_quantite;
+                                            $total += $sous_total;
+                                ?>
+
                                     <tr>
                                         <td>
-                                            <img class="img-responsive" src="admin_area/product_images/produit1.jpg" alt="produit 1">
+                                            <a href="details.php?pro_id=<?php echo $pro_id; ?>">
+                                                <img class="img-responsive" src="admin_area/product_images/<?php echo $produit_img1 ?>" alt="produit 1">
+                                            </a>
                                         </td>
                                         <td>
-                                            <a href="#">Coiffure Patrick fruit 1</a>
+                                            <a href="details.php?pro_id=<?php echo $pro_id; ?>"><?php echo $produit_libelle ?></a>
                                         </td>
                                         <td>
-                                            4
+                                            <?php echo $pro_quantite ?>
                                         </td>
                                         <td>
-                                            30 € 00
+                                            <?php echo $produit_prix . ' €'?>
                                         </td>
                                         <td>
-                                            /
+                                            <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>">
                                         </td>
                                         <td>
-                                            <input type="checkbox" name="remove[]">
-                                        </td>
-                                        <td>
-                                            30 € 00
+                                            <?php echo $sous_total . ' €' ?>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="img-responsive" src="admin_area/product_images/produit2.jpg" alt="produit 2">
-                                        </td>
-                                        <td>
-                                            <a href="#">Coiffure Patrick fruit 2</a>
-                                        </td>
-                                        <td>
-                                            4
-                                        </td>
-                                        <td>
-                                            30 € 00
-                                        </td>
-                                        <td>
-                                            /
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" name="remove[]">
-                                        </td>
-                                        <td>
-                                            30 € 00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="img-responsive" src="admin_area/product_images/produit3.jpg" alt="produit 2">
-                                        </td>
-                                        <td>
-                                            <a href="#">Coiffure Patrick fruit 3</a>
-                                        </td>
-                                        <td>
-                                            4
-                                        </td>
-                                        <td>
-                                            30 € 00
-                                        </td>
-                                        <td>
-                                            /
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" name="remove[]">
-                                        </td>
-                                        <td>
-                                            30 € 00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="img-responsive" src="admin_area/product_images/produit4.jpg" alt="produit 2">
-                                        </td>
-                                        <td>
-                                            <a href="#">Coiffure Patrick fruit 4</a>
-                                        </td>
-                                        <td>
-                                            4
-                                        </td>
-                                        <td>
-                                            30 € 00
-                                        </td>
-                                        <td>
-                                            /
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" name="remove[]">
-                                        </td>
-                                        <td>
-                                            30 € 00
-                                        </td>
-                                    </tr>
+
+                                <?php 
+                                        } 
+                                    }
+                                ?>                                    
+                                    
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th colspan="5">Total</th>
-                                        <th colspan="2">90 € 00</th>
+                                        <th colspan="2"><?php echo $total . ' €'; ?></th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -180,6 +141,30 @@
                     </form>
                 </div>
             </div>
+
+
+            <?php 
+            
+
+            function updatePanier(){
+                global $con;
+                if(isset($_POST['update'])){
+                    foreach($_POST['remove'] as $remove_id){
+                        $delete_produit = "delete from panier where produitId='$remove_id'";
+                        $run_delete = mysqli_query($con, $delete_produit);
+                        if($run_delete){
+                            echo "<script>window.open('panier.php', '_self')</script>";
+                        }
+
+                    }
+                }
+            }
+            echo @$up_panier = updatePanier();
+            
+            
+            ?>
+
+
 
             <div class="col-md-3">
                 <div id="order-summary" class="box">

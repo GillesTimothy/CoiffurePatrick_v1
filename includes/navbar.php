@@ -35,7 +35,7 @@
 
                 <a href="panier.php" id="btn-primary" class="btn navbar-btn right">
                     <i class="fa fa-shopping-cart"></i>
-                    <span>4 - Mon Panier </span>
+                    <span><?php items(); ?> - Mon Panier </span>
                 </a>
 
                 <div class="navbar-collapse collapse right">

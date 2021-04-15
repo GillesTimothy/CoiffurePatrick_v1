@@ -77,6 +77,28 @@
                                 <i class="fa fa-file"></i> Envoyer le message </button>
                             </div>
                         </form>
+
+                        <?php
+
+                            if(isset($_POST['submit'])){
+                                $sender_name = $_POST['name'];
+                                $sender_email = $_POST['email'];
+                                $sender_subject = $_POST['subject'];
+                                $sender_message = $_POST['message'];
+
+                                $receive_email = "titigilles@live.fr";
+                                mail($receive_email,$sender_name,$sender_subject,$sender_message, $sender_email);
+
+                                $email = $_POST['mail'];
+                                $subject = "Bienvenue la miff sur le site du coiffeur";
+                                $msg = "Merci de nous avoir envoyer un message. Nous vous recontactons le plus vite possible.";
+                                $from = "titigilles@live.fr";
+                                mail($email,$subject,$msg,$from);
+                                echo '<h2>votre message à bien été envoyer</h2>';
+                            }
+
+                        ?>
+
                     </div>
                 </div>
             </div>

@@ -52,7 +52,7 @@
                         <center>
                         <h2>Enregistrer un nouveau compte</h2>
                         </center>
-                        <form action="contact.php" method="post">
+                        <form action="inscription.php" method="post">
                             <div class="form-group">
                                 <label>Nom</label>
                                 <input type="text" class="form-control" name="i_nom" required></input>
@@ -66,6 +66,14 @@
                                 <input type="text" class="form-control" name="i_email" required></input>
                             </div>
                             <div class="form-group">
+                                <label>Adresse</label>
+                                <input type="text" class="form-control" name="i_adresse" required></input>
+                            </div>
+                            <div class="form-group">
+                                <label>Numéro de téléphone</label>
+                                <input type="text" class="form-control" name="i_telephone" required></input>
+                            </div>
+                            <div class="form-group">
                                 <label>Mot de Passe</label>
                                 <input type="password" class="form-control" name="i_mdp" required></input>
                             </div>
@@ -75,7 +83,7 @@
                             </div>
                             
                             <div class=text-center>
-                                <button type="submit" name="submit" class="btn btn-primary">
+                                <button type="submit" name="inscription" class="btn btn-primary">
                                 <i class="fa fa-user-plus"></i> Inscription</button>
                             </div>
                         </form>
@@ -89,4 +97,25 @@
     <?php include 'includes/footer.php'; ?>
 
  </body>
- </html>   
+ </html>  
+
+ <?php
+ 
+    if(isset($_POST['inscription'])){
+        $i_nom = $_POST['i_nom'];
+        $i_prenom = $_POST['i_prenom'];
+        $i_email = $_POST['i_email'];
+        $i_adresse = $_POST['i_adresse'];
+        $i_telephone = $_POST['i_telephone'];
+        $i_mdp = $_POST['i_mdp'];
+        $i_mdp_confirm = $_POST['i_mdp_confirm'];
+        $ip_add = getRealIpUser();
+
+        $insert_utilisateur = "insert into utilisateur (nom, prenom, email, telephone, mdp, adresse, ip_add) values ('$i_nom', '$i_prenom', '$i_email', '$i_telephone', '$i_mdp', '$i_adresse', '$ip_add')";
+
+        $run_utilisateur = mysqli_query($con, $insert_utilisateur);
+
+        
+    }    
+
+ ?>
