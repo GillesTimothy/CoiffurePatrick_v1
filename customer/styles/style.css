@@ -67,6 +67,9 @@ body {
 .navbar {
     background: #ffffff;
 }
+#navbar {
+    min-height: 70px;
+}
 .navbar-collapse .right {
     float: right;
     margin-left: 10px;

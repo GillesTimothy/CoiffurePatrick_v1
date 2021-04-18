@@ -52,18 +52,57 @@
                         <center>
                         <h2>Connexion à votre compte</h2>
                         </center>
-                        <form action="contact.php" method="post">
+
+                        <?php 
+                        
+                            if(isset($_POST['connexion'])){
+                                
+
+                            
+
+                            try {
+                                $bdd = new PDO('mysql:host=localhost;dbname=testcoiffurepatrick;charset=utf8', 'root', '');
+                            }
+                            catch(Exception $e){
+                                die('ERREUR : ' . $e->getMessage());
+                            }
+
+                            $req=$bdd->query("SELECT * FROM utilisateur WHERE email = '" . $_POST['u_email'] . "'");
+                            if($req->rowCount() != 0){
+                            $row = $req->fetch();
+                            $isPasswordCorrect = password_verify($_POST['u_mdp'], $row['mdp']);
+                            //Verifie si le password correspond bien à celui de la db
+                            if($isPasswordCorrect){
+                                $_SESSION['utilisateur_email'] = $row['email'];   
+                                $_SESSION['utilisateur_prenom'] = $row['prenom'];
+                                echo '<script>window.open("index.php","_self")</script>';
+                            }
+                            else{
+                                echo'mot de passe incorrect ! ';
+                            }
+                        }
+                        //Si pseudo incorrect et pas trouvé dans la requête
+                        else{
+                            echo 'Pseudo incorrecte ! ';
+                        }
+                    }
+                        ?>
+                        
+                        
+                        
+                        
+                        <form action="connexion.php" method="post">
                             <div class="form-group">
-                                <label>Email</label>
-                                <input type="text" class="form-control" name="i_email" required></input>
+                                    <label>Email</label>
+                                <input type="text" class="form-control" name="u_email" required></input>
                             </div>
                             <div class="form-group">
                                 <label>Mot de Passe</label>
-                                <input type="password" class="form-control" name="i_mdp" required></input>
+                                <input type="password" class="form-control" name="u_mdp" required></input>
                             </div>
                             
                             <div class=text-center>
-                                <button type="submit" name="submit" class="btn btn-primary">
+                                <button type="submit" name="connexion" class="btn btn-primary">
                                 <i class="fa fa-sign-in"></i> Connexion</button>
                             </div>
                         </form>

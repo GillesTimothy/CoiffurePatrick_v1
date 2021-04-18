@@ -78,9 +78,7 @@
 
                                 $run_utilisateur = mysqli_query($con, $insert_utilisateur);
                                 if($run_utilisateur) {
-                                    $_SESSION['utilisateur_email'] = $i_email;
-                                    $_SESSION['utilisateur_prenom'] = $i_prenom;
-                                    echo '<script>alert("inscription OK !")</script>';
+                                    
                                     echo '<script>window.open("connexion.php","_self")</script>';
                                     
                                 }

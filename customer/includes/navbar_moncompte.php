@@ -2,8 +2,8 @@
         <div class="container">
             <div class="navbar-header">
                 <a href="../index.php" class="navbar-brand home">
-                    <img src="images/coiffurePatrick_125x49.png" alt="logo" class="hidden-xs">
-                    <img src="images/coiffurePatrick_83x33.png" alt="logo mobile" class="visible-xs">
+                <img src="images/125X55.png" alt="logo" class="hidden-xs">
+                    <img src="images/83X33.png" alt="logo mobile" class="visible-xs">
                 </a>
                 <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
                     <span class="sr-only">Toggle Navigation</span>

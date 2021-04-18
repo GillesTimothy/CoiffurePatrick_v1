@@ -2,14 +2,14 @@
         <div class="container">
             <div class="col-md-6 offer">
                 <a href="../index.php" class="btn btn-success btn-sm">
-                    <?php
-                            if(!isset($_SESSION['utilisateur_nom'])){
-                                echo 'COIFFURE PATRICK';
-                            }
-                            else {
-                                echo  " Bonjour " . $_SESSION['utilisateur_prenom'];
-                            }
-                        ?>
+                <?php
+                        if(!isset($_SESSION['utilisateur_prenom'])){
+                            echo 'COIFFURE PATRICK';
+                        }
+                        else {
+                            echo  " Bonjour " . $_SESSION['utilisateur_prenom'];
+                        }
+                    ?>
                 </a>
                 <a href="../panier.php">Panier : <?php items(); ?>  -  Prix Total : <?php prixTotal(); ?>€  </a>
                 <a href="moncompte.php">|  Rendez-Vous : 0</a>
