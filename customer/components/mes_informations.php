@@ -8,26 +8,27 @@
 
 <br>
 
-<form action="" method="post" enctype="multipart/form-data">
+
+<form action="" enctype="multipart/form-data">
     <div class="form-group">
         <label> Nom : </label>
-        <input type="text" disabled="disabled" name="c_name" class="form-control" value="Gilles" require></input>
+        <input type="text" disabled="disabled" name="c_name" class="form-control" value="<?php echo $_SESSION['utilisateur_nom']; ?>" require></input>
     </div>
     <div class="form-group">
         <label> Prenom : </label>
-        <input type="text" disabled="disabled" name="c_name" class="form-control" value="Timothy" require></input>
+        <input type="text" disabled="disabled" name="c_name" class="form-control" value="<?php echo $_SESSION['utilisateur_prenom']; ?>" require></input>
     </div>
     <div class="form-group">
         <label> Email : </label>
-        <input type="text" disabled="disabled" name="c_name" class="form-control" value="titigilles@live.fr" require></input>
+        <input type="text" disabled="disabled" name="c_name" class="form-control" value="<?php echo $_SESSION['utilisateur_email']; ?>" require></input>
     </div>
     <div class="form-group">
         <label> Adresse : </label>
-        <input type="text" disabled="disabled" name="c_name" class="form-control" value="venelle du bois de villers 7, 1300 Wavre" require></input>
+        <input type="text" disabled="disabled" name="c_name" class="form-control" value="<?php echo $_SESSION['utilisateur_adresse']; ?>" require></input>
     </div>
     <div class="form-group">
         <label> Telephone : </label>
-        <input type="text" disabled="disabled" name="c_name" class="form-control" value="0471840087" require></input>
+        <input type="text" disabled="disabled" name="c_name" class="form-control" value="<?php echo $_SESSION['utilisateur_telephone']; ?>" require></input>
     </div>
     
 </form>

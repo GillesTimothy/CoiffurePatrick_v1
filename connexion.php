@@ -58,34 +58,35 @@
                             if(isset($_POST['connexion'])){
                                 
 
-                            
+                                try {
+                                    $bdd = new PDO('mysql:host=localhost;dbname=testcoiffurepatrick;charset=utf8', 'root', '');
+                                }
+                                catch(Exception $e){
+                                    die('ERREUR : ' . $e->getMessage());
+                                }
 
-                            try {
-                                $bdd = new PDO('mysql:host=localhost;dbname=testcoiffurepatrick;charset=utf8', 'root', '');
+                                $req=$bdd->query("SELECT * FROM utilisateur WHERE email = '" . $_POST['u_email'] . "'");
+                                if($req->rowCount() != 0){
+                                $row = $req->fetch();
+                                $isPasswordCorrect = password_verify($_POST['u_mdp'], $row['mdp']);
+                                //Verifie si le password correspond bien à celui de la db
+                                if($isPasswordCorrect){
+                                    $_SESSION['utilisateur_email'] = $row['email'];   
+                                    $_SESSION['utilisateur_prenom'] = $row['prenom'];
+                                    $_SESSION['utilisateur_nom'] = $row['nom'];
+                                    $_SESSION['utilisateur_telephone'] = $row['telephone'];
+                                    $_SESSION['utilisateur_adresse'] = $row['adresse'];
+                                    echo '<script>window.open("index.php","_self")</script>';
+                                }
+                                else{
+                                    echo'Mot de passe incorrect ! ';
+                                }
+                                }
+                                //Si pseudo incorrect et pas trouvé dans la requête
+                                else{
+                                    echo 'Email incorrecte ! ';
+                                }
                             }
-                            catch(Exception $e){
-                                die('ERREUR : ' . $e->getMessage());
-                            }
-
-                            $req=$bdd->query("SELECT * FROM utilisateur WHERE email = '" . $_POST['u_email'] . "'");
-                            if($req->rowCount() != 0){
-                            $row = $req->fetch();
-                            $isPasswordCorrect = password_verify($_POST['u_mdp'], $row['mdp']);
-                            //Verifie si le password correspond bien à celui de la db
-                            if($isPasswordCorrect){
-                                $_SESSION['utilisateur_email'] = $row['email'];   
-                                $_SESSION['utilisateur_prenom'] = $row['prenom'];
-                                echo '<script>window.open("index.php","_self")</script>';
-                            }
-                            else{
-                                echo'mot de passe incorrect ! ';
-                            }
-                        }
-                        //Si pseudo incorrect et pas trouvé dans la requête
-                        else{
-                            echo 'Pseudo incorrecte ! ';
-                        }
-                    }
                         ?>
                         
                         
