@@ -42,7 +42,7 @@
             </div>
             <div class="col-md-3">
 
-            <?php include 'components/sidebar_contact.php'; ?>
+            <?php include 'components/sidebar_connexion.php'; ?>
             
             </div>
 
