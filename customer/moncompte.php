@@ -70,6 +70,11 @@
                     <?php if(isset($_GET['supp_compte'])) {
                         include("components/supp_compte.php");
                     } ?>
+
+                    <?php if(isset($_GET['info_commande'])) {
+                        include("components/info_commande.php");
+                    } ?>
+
                 </div>
             </div>
         </div>

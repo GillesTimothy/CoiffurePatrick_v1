@@ -31,7 +31,8 @@ function add_panier() {
         $query = "insert into panier (produitId, ip_add, quantite) values ($produit_id, '$ip_add', $produit_quantite)";
         $run_query = mysqli_query($db, $query);
         if($run_query) {
-            echo '<p style="color: green;"> Le produit a déjà été ajouté au panier ! </p>';
+            echo '<script>alert("produit bien ajouter au panier")</script>';
+            echo '<script>window.open("boutique.php","_self")</script>';
             //echo "<script>alert('Le produit à bien été ajouter au panier !')</script>";
             //echo "<script>window.open('details.php?pro_id=$produit_id', '_self')</script>";   
         }

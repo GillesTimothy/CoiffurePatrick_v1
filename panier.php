@@ -133,7 +133,7 @@
                                 <button type="submit" name="update" value="Rafraichir" class="btn btn-default">
                                     <i class="fa fa-refresh"></i> Rafraichir
                                 </button>
-                                <a href="checkout.php" class="btn btn-primary">
+                                <a href="commande.php" class="btn btn-primary">
                                     Confirmer la commande <i class="fa fa-chevron-right"></i>
                                 </a>
                             </div>

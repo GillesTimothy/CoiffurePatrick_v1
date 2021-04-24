@@ -71,6 +71,7 @@
                                 $isPasswordCorrect = password_verify($_POST['u_mdp'], $row['mdp']);
                                 //Verifie si le password correspond bien à celui de la db
                                 if($isPasswordCorrect){
+                                    $_SESSION['utilisateur_ID'] = $row['idUtilisateur'];   
                                     $_SESSION['utilisateur_email'] = $row['email'];   
                                     $_SESSION['utilisateur_prenom'] = $row['prenom'];
                                     $_SESSION['utilisateur_nom'] = $row['nom'];

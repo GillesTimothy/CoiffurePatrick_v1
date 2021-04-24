@@ -47,5 +47,8 @@
 
     <?php include 'includes/footer.php'; ?>
 
+    <a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+    
+
 </body>
 </html>
