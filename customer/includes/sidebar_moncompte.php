@@ -1,7 +1,7 @@
 <div class="panel panel-default sidebar-menu">
     <div class="panel-heading">
         <center>
-            <img src="customer_images/profil_picture.jpg" alt="profil picture">
+            <img class="img-responsive" src="customer_images/profil_picture.jpg" alt="profil picture">
         </center>
         <br>
         <h3 align="center" class="panel-title">Timothy Gilles</h3>

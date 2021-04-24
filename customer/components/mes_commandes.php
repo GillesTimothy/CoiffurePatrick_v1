@@ -1,3 +1,6 @@
+<?php
+    $db = mysqli_connect("localhost","root","","testcoiffurepatrick");
+?>
 <center>
     <h1> Mes Commandes </h1>
     <p class="lead"> </p>
@@ -8,6 +11,8 @@
 
 <br>
 
+
+
 <div class="table-responsive">
     <table class="table table-bordered table-hover">
         <thead>
@@ -17,25 +22,39 @@
                 <th> Montant </th>
                 <th> Date Réservation </th>
                 <th> Statut </th>
-
-
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th> #1 </th>
-                <td><a href="moncompte.php?info_commande">11111</td>
-                <td> 4 </td>
-                <td> 01-04-2021 </td>
-                <td> Disponible </td>
-            </tr>
-            <tr>
-                <th> #2 </th>
-                <td> 111112 </td>
-                <td> 3 </td>
-                <td> 03-04-2021 </td>
-                <td> En cours de préparation </td>
-            </tr>
+
+        <?php
+            $get_commande = "select * from commande order by 1 ASC";
+            $run_commande = mysqli_query($db, $get_commande);
+            $a =1;
+            while($row_commande = mysqli_fetch_array($run_commande)) {
+
+                $commandeId = $row_commande['commandeId'];
+                $utilisateurId = $row_commande['utilisateurId'];
+                $numero = $row_commande['numero'];
+                $prixTotal = $row_commande['prixTotal'];
+                $statut = $row_commande['statut'];
+                $date = $row_commande['date'];
+
+                echo "
+
+                        <tr>
+                        <th> # $a </th>
+                        <td><a href='moncompte.php?info_commande=$numero'>$numero</td>
+                        <td> $prixTotal  € </td>
+                        <td> $date </td>
+                        <td> $statut </td>
+                        </tr>
+                    ";
+
+                $a++;
+            }
+        ?>
+            
+            
         </tbody>    
     </table>
 </div>    
