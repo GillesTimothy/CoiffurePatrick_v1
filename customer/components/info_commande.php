@@ -13,12 +13,12 @@
 <br>
 
 <div class="table-responsive">
-    <table class="table table-bordered table-hover">
+    <table class="table">
         <thead>
             <tr>
                 <th></th>
                 <th> Article </th>
-                
+                <th>  </th>
                 <th> Quantite </th>
                 <th> Sous Total </th>
             </tr>
@@ -50,6 +50,8 @@
                                 <a href='../details.php?pro_id=$articleId'>
                                     <img class='img-responsive' style='width: 50px; float: left; padding: none;' src='../admin_area/product_images/$produit_img1' alt='produit 1'>
                                 </a>
+                                </td>
+                                <td>
                                 <a href='../details.php?pro_id=$articleId'> $produit_libelle</a>
                             </td>
                             <td> $quantite </td>
