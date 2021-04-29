@@ -4,7 +4,7 @@
             <img class="img-responsive" src="customer_images/profil_picture.jpg" alt="profil picture">
         </center>
         <br>
-        <h3 align="center" class="panel-title">Timothy Gilles</h3>
+        <h3 align="center" class="panel-title"><?php echo $_SESSION['utilisateur_prenom'] . " " . $_SESSION['utilisateur_nom']; ?></h3>
     </div>
     
     <div class="panel-body">

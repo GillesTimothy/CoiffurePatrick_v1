@@ -29,7 +29,8 @@
             <tbody>
 
             <?php
-                $get_commande = "select * from commande order by 1 ASC";
+                $id_utilisateur = $_SESSION['utilisateur_ID'];
+                $get_commande = "select * from commande where utilisateurId = '$id_utilisateur' order by 1 ASC";
                 $run_commande = mysqli_query($db, $get_commande);
                 $a =1;
                 while($row_commande = mysqli_fetch_array($run_commande)) {
