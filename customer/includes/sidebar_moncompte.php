@@ -12,7 +12,7 @@
             <li id="<?php if(isset($_GET['mes_informations'])){ echo "active"; } ?>">
                 <a href="moncompte.php?mes_informations">
                 <i class="fa fa-info-circle"></i> Mes informations</a>
-            </li>
+            </li>       
             <li id="<?php if(isset($_GET['mes_commandes'])){ echo "active"; } ?>">
                 <a href="moncompte.php?mes_commandes">
                 <i class="fa fa-list"></i> Mes Commandes</a>
@@ -23,7 +23,7 @@
             </li>
         </ul>
     </div>
-</div>
+</div>  
 
 <div class="panel panel-default sidebar-menu">
     <div class="panel-heading">
