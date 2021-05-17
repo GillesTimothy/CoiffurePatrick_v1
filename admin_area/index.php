@@ -7,9 +7,10 @@
     <title>Coiffure Patrick Dashboard</title>
     <link rel="icon" href="../images/" type="image/x-icon" />
 
-    <link rel="stylesheet" href="css/bootstrap-337.min.css"> 
+    
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css/bootstrap-337.min.css">
+    <link rel="stylesheet" href="css/css/style.css">
     <script src="js/jquery-331.min.js"></script>
     <script src="js/bootstrap-337.min.js"></script> 
 
@@ -29,6 +30,14 @@
 
         <div id="page-wrapper">
             <div class="container-fluid">
+
+            <?php 
+
+                if(isset($_GET['dashboard'])){
+                    include("dashboard.php");
+                }
+
+            ?>
             
             </div>
         </div>

@@ -11,74 +11,11 @@
             
         </button>
         
-        <a href="index.php?dashboard" class="navbar-brand">Dashboard</a>
+        <a href="index.php?dashboard" class="navbar-brand">Dashboard Coiffeur</a>
         
     </div>
     
-    <ul class="nav navbar-right top-nav">
-        
-        <li class="dropdown">
-            
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                
-                <i class="fa fa-user"></i> Coiffeur <b class="caret"></b>
-                
-            </a>
-            
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="index.php?user_profile">
-                        
-                        <i class="fa fa-fw fa-user"></i> Profile
-                        
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="index.php?view_products">
-                        
-                        <i class="fa fa-fw fa-envelope"></i> Products
-                        
-                        <span class="badge">7</span>
-                        
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="index.php?view_customers">
-                        
-                        <i class="fa fa-fw fa-users"></i> Customeres
-                        
-                        <span class="badge">11</span>
-                        
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="index.php?view_cats">
-                        
-                        <i class="fa fa-fw fa-gear"></i> Product Categories
-                        
-                        <span class="badge">4</span>
-                        
-                    </a>
-                </li>
-                
-                <li class="divider"></li>
-                
-                <li>
-                    <a href="logout.php">
-                        
-                        <i class="fa fa-fw fa-power-off"></i> Log Out
-                        
-                    </a>
-                </li>
-                
-            </ul>
-            
-        </li>
-        
-    </ul>
+    
     
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
