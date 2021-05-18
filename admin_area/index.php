@@ -4,10 +4,39 @@
     include("includes/db.php");
     
     if(!isset($_SESSION['admin_email'])){
-        
+
         echo "<script>window.open('login.php','_self')</script>";
-        
+
     } else {
+        
+        $admin_session = $_SESSION['admin_email'];
+        $get_admin = "select * from coiffeur";
+        $run_admin = mysqli_query($con,$get_admin);
+        $count_admin = mysqli_num_rows($run_admin);
+
+        $get_products = "select * from produits";
+        $run_products = mysqli_query($con,$get_products);
+        $count_products = mysqli_num_rows($run_products);
+
+        $get_utilisateur = "select * from utilisateur";
+        $run_utilisateur = mysqli_query($con,$get_utilisateur);
+        $count_utilisateur = mysqli_num_rows($run_utilisateur);
+
+        $get_commande = "select * from commande";
+        $run_commande = mysqli_query($con,$get_commande);
+        $count_commande = mysqli_num_rows($run_commande);
+
+        $get_contenu_commande = "select * from contenu_commande";
+        $run_contenu_commande = mysqli_query($con,$get_contenu_commande);
+        
+
+        $get_categorie = "select * from categorie";
+        $run_categorie = mysqli_query($con,$get_categorie);
+        $count_categorie = mysqli_num_rows($run_categorie);
+
+        $get_categorie_produit = "select * from categorie_produit";
+        $run_categorie_produit = mysqli_query($con,$get_categorie_produit);
+        $count_categorie_produit = mysqli_num_rows($run_categorie_produit);        
 
 ?>
 
@@ -47,7 +76,11 @@
             <?php 
 
                 if(isset($_GET['dashboard'])){
-                    include("dashboard.php");
+                    include("components/dashboard.php");
+                }
+
+                if(isset($_GET['insert_product'])){
+                    include("components/insert_product.php");
                 }
 
             ?>

@@ -27,7 +27,7 @@
                         <i class="fa fa-shopping-cart fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <div class="huge"> 17 </div>
+                        <div class="huge"> <?php echo $count_commande; ?> </div>
                         <div> Commandes </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                         <i class="fa fa-users fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <div class="huge"> 25 </div>
+                        <div class="huge"> <?php echo $count_utilisateur; ?> </div>
                         <div> Clients </div>
                     </div>
                 </div>
@@ -146,53 +146,56 @@
                     <table class="table table-hover table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th> Order no: </th>
-                                <th> Customer Email: </th>
-                                <th> Invoice No: </th>
-                                <th> Product ID: </th>
-                                <th> Product Qty: </th>
-                                <th> Product Size: </th>
-                                <th> Status: </th>
+                                <th></th>
+                                <th> Client </th>
+                                <th> Numéro Commande</th>
+                                <th> Montant</th>
+                                <th> Date Réservation</th>
+                                <th> Statut</th>
+                                <th> </th>                             
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td> 1 </td>
-                                <td> pelanggan@gmail.com </td>
-                                <td> 32sa32 </td>
-                                <td> 24 </td>
-                                <td> 2 </td>
-                                <td> Large </td>
-                                <td> Pending </td>
-                            </tr>
-                            <tr>
-                                <td> 1 </td>
-                                <td> pelanggan@gmail.com </td>
-                                <td> 32sa32 </td>
-                                <td> 24 </td>
-                                <td> 2 </td>
-                                <td> Large </td>
-                                <td> Pending </td>
 
-                            </tr>
+                            <?php 
+                            
+                                $i = 0;
+                                $get_commande = "select * from commande order by 1 DESC LIMIT 0,4";
+                                $run_commande = mysqli_query($con,$get_commande);
+                                while($row_commande = mysqli_fetch_array($run_commande)){
+                                    $commande_id = $row_commande['commandeId'];
+                                    $utilisateur_id = $row_commande['utilisateurId'];
+                                    $numero_commande = $row_commande['numero'];
+                                    $prixTotal = $row_commande['prixTotal'];
+                                    $date_commande = $row_commande['date'];
+                                    $statut_commande = $row_commande['statut'];                                    
+                                    $i++;
+
+                            ?>
                             <tr>
-                                <td> 1 </td>
-                                <td> pelanggan@gmail.com </td>
-                                <td> 32sa32 </td>
-                                <td> 24 </td>
-                                <td> 2 </td>
-                                <td> Large </td>
-                                <td> Pending </td>
+                                <td><?php echo $commande_id; ?></td>
+                                <td>
+                                    <?php 
+                                        
+                                        $get_utilisateur = "select * from utilisateur where idUtilisateur='$utilisateur_id'";
+                                        $run_utilisateur = mysqli_query($con,$get_utilisateur);
+                                        $row_utilisateur = mysqli_fetch_array($run_utilisateur);
+                                        $utilisateur_nom = $row_utilisateur['nom'];
+                                        $utilisateur_prenom = $row_utilisateur['prenom'];
+                                        echo $utilisateur_nom . ' ' . $utilisateur_prenom;
+                                    ?>
+                                </td>
+                                <td> <?php echo $numero_commande; ?> </td>
+                                <td> <?php echo $prixTotal; ?> </td>
+                                <td> <?php echo $date_commande; ?> </td>
+                                <td> <?php echo $statut_commande; ?> </td>
+                                <td> ACCEPTER </td>
+                            <?php
+                                }
+                            
+                            ?>   
                             </tr>
-                            <tr>
-                                <td> 1 </td>
-                                <td> pelanggan@gmail.com </td>
-                                <td> 32sa32 </td>
-                                <td> 24 </td>
-                                <td> 2 </td>
-                                <td> Large </td>
-                                <td> Pending </td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -214,7 +217,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <a href="index.php?view_customers">
+                        <a href="index.php?insert_product">
                             <div class="panel-footer">
                                 <span class="pull-left">
                                     Ajouter produit 
@@ -278,13 +281,14 @@
                     <table class="table table-hover table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th> Order no: </th>
-                                <th> Customer Email: </th>
-                                <th> Invoice No: </th>
-                                <th> Product ID: </th>
-                                <th> Product Qty: </th>
-                                <th> Product Size: </th>
-                                <th> Status: </th>
+                                <th>  </th>
+                                <th> Client : </th>
+                                <th> Date : </th>
+                                <th> Heure Début : </th>
+                                <th> Heure Fin : </th>
+                                <th> Type : </th>
+                                <th> Statut : </th>
+                                <th>  </th>   
                             </tr>
                         </thead>
                         <tbody>
@@ -296,6 +300,7 @@
                                 <td> 2 </td>
                                 <td> Large </td>
                                 <td> Pending </td>
+                                <th> Valider </th>   
                             </tr>
                             <tr>
                                 <td> 1 </td>
@@ -305,6 +310,7 @@
                                 <td> 2 </td>
                                 <td> Large </td>
                                 <td> Pending </td>
+                                <th> Valider </th>
 
                             </tr>
                             <tr>
@@ -315,6 +321,7 @@
                                 <td> 2 </td>
                                 <td> Large </td>
                                 <td> Pending </td>
+                                <th> Valider </th>
                             </tr>
                             <tr>
                                 <td> 1 </td>
@@ -324,6 +331,7 @@
                                 <td> 2 </td>
                                 <td> Large </td>
                                 <td> Pending </td>
+                                <th> Valider </th>
                             </tr>
                         </tbody>
                     </table>

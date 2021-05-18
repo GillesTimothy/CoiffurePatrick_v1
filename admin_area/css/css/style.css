@@ -64,6 +64,13 @@ body{
     color: #ffffff;
 }
 
+.sess-info{
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #bfbfbf;
+    display: block;
+}
+
 /*  Custom Color For Panel  */
 
 .huge{

@@ -21,7 +21,7 @@ if(isset($_SESSION['utilisateur_prenom'])){
         }
     }
     $c_utilisateur_id = $_SESSION['utilisateur_ID'];
-    $c_statut = "en attente d acceptation";
+    $c_statut = "attente d acceptation";
     $c_numero = mt_rand();
     $c_total = $total_panier;
 

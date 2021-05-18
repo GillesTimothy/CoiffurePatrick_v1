@@ -17,7 +17,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>           
         </button>      
-        <a href="index.php?dashboard" class="navbar-brand">Dashboard Coiffeur</a>    
+        <a href="index.php?dashboard" class="navbar-brand">Dashboard Coiffeur</a>
+            
     </div> 
     
     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -36,13 +37,8 @@
                         <a href="index.php?insert_product">ajouter produit</a>
                     </li>
                     <li>
-                        <a href="index.php?view_products">voir produits</a>
-                    </li>
-                    <li>
-                        <a href="index.php?insert_p_cat">ajouter catégorie</a>
-                    </li>
-                    <li>
-                        <a href="index.php?view_p_cats">voir catégories</a>
+                        <a href="index.php?view_products">voir produits  <span class="badge"><?php echo $count_products; ?></span></a>
+                        
                     </li>
                 </ul>
                 
@@ -70,17 +66,23 @@
             <li>
                 <a href="#" data-toggle="collapse" data-target="#cat">
                         
-                        <i class="fa fa-fw fa-book"></i> Categories
+                        <i class="fa fa-fw fa-book"></i> Catégories
                         <i class="fa fa-fw fa-caret-down"></i>
                         
                 </a>
                 
                 <ul id="cat" class="collapse">
                     <li>
-                        <a href="index.php?insert_cat"> Insert Category </a>
+                        <a href="index.php?insert_cat"> ajouter catégorie produits </a>
                     </li>
                     <li>
-                        <a href="index.php?view_cats"> View Categories </a>
+                        <a href="index.php?view_cats"> voir catégories produits  <span class="badge"><?php echo $count_categorie_produit; ?></span></a>
+                    </li>
+                    <li>
+                        <a href="index.php?insert_p_cat">ajouter catégorie</a>
+                    </li>
+                    <li>
+                        <a href="index.php?view_p_cats">voir catégories  <span class="badge"><?php echo $count_categorie; ?></span></a>
                     </li>
                 </ul>
 
@@ -107,25 +109,25 @@
             
             <li>
                 <a href="index.php?view_customers">
-                    <i class="fa fa-fw fa-users"></i>Clients
+                    <i class="fa fa-fw fa-users"></i>Clients  <span class="badge"><?php echo $count_utilisateur; ?></span>
                 </a>
             </li>
             
             <li>
                 <a href="index.php?view_orders">
-                    <i class="fa fa-fw fa-book"></i>Commandes
+                    <i class="fa fa-fw fa-book"></i>Commandes  <span class="badge"><?php echo $count_commande; ?></span>
                 </a>
             </li>
             
             <li>
                 <a href="index.php?view_rdv">
-                    <i class="fa fa-fw fa-money"></i>Rendez-vous
+                    <i class="fa fa-fw fa-money"></i>Rendez-vous 
                 </a>
             </li>
 
             <li>
                 <a href="index.php?view_dispo">
-                    <i class="fa fa-fw fa-calendar"></i>Disponibilités
+                    <i class="fa fa-fw fa-calendar"></i>Disponibilités  
                 </a>
             </li>
             
@@ -141,7 +143,7 @@
                         <a href="index.php?insert_user">ajouter utilisateur</a>
                     </li>
                     <li>
-                        <a href="index.php?view_users">voir utilisateurs</a>
+                        <a href="index.php?view_users">voir utilisateurs  <span class="badge"><?php echo $count_admin; ?></span></a>
                     </li>
                     <li>
                         <a href="index.php?user_profile">option</a>
@@ -154,6 +156,12 @@
                 <a href="logout.php">
                     <i class="fa fa-fw fa-power-off"></i>Déconnexion
                 </a>
+            </li>
+
+            <li class=sess-info>
+                <p>
+                    <i class="fa fa-fw fa-user"></i> <?php echo $_SESSION['admin_email']; ?>
+                </p>
             </li>
             
         </ul>

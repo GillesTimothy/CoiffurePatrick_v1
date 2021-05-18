@@ -1,5 +1,11 @@
 <?php
     include ("includes/db.php");
+
+    if(!isset($_SESSION['admin_email'])){
+        
+        echo "<script>window.open('login.php','_self')</script>";
+        
+    } else {
 ?>
 
 <!DOCTYPE html>
@@ -147,6 +153,27 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fa fa-info fa-fw"></i> Informations Complémentaire
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label"> Taille Images </label> 
+                            <div class="col-md-6">
+                                <input type="text" disabled="disabled" class="form-control" value=" 480 x 508 px" require></input>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
@@ -186,3 +213,5 @@ if(isset($_POST['submit'])){
 }
 
 ?>
+
+<?php } ?>
