@@ -212,15 +212,15 @@
         <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <i class="fa fa-money fa-fw"></i> Produits
+                        <i class="fa fa-fw fa-tag"></i> Commande
                     </h3>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <a href="index.php?ajout_produit">
+                        <a href="index.php?ajout_commande">
                             <div class="panel-footer">
                                 <span class="pull-left">
-                                    Ajouter produit 
+                                    Passer commande 
                                 </span>
                                 <span class="pull-right">
                                     <i class="fa fa-arrow-circle-right"></i> 
@@ -230,8 +230,8 @@
                         </a>
                     </div>
                     <div class="text-right">
-                        <a href="index.php?voir_produit">
-                            Voir Produits <i class="fa fa-arrow-circle-right"></i>
+                        <a href="index.php?voir_commande">
+                            Voir Commandes <i class="fa fa-arrow-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -242,15 +242,15 @@
         <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <i class="fa fa-money fa-fw"></i> Catégories
+                        <i class="fa fa-truck"></i> Stock
                     </h3>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <a href="index.php?view_customers">
+                        <a href="index.php?arrivage">
                             <div class="panel-footer">
                                 <span class="pull-left">
-                                    Ajouter catégorie 
+                                    Arrivage produits 
                                 </span>
                                 <span class="pull-right">
                                     <i class="fa fa-arrow-circle-right"></i> 
@@ -260,8 +260,8 @@
                         </a>
                     </div>
                     <div class="text-right">
-                        <a href="index.php?view_orders">
-                            Voir Catégories <i class="fa fa-arrow-circle-right"></i>
+                        <a href="index.php?voir_stock">
+                            Voir Stock <i class="fa fa-arrow-circle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -337,7 +337,7 @@
                     </table>
                 </div>
                 <div class="text-right">
-                    <a href="index.php?view_orders">
+                    <a href="index.php?voir_rdv">
                         Voir Rendez-Vous <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -349,15 +349,15 @@
         <div class="panel panel-green">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <i class="fa fa-money fa-fw"></i> Services
+                        <i class="fa fa-money fa-fw"></i> Rendez-vous
                     </h3>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <a href="index.php?view_customers">
+                        <a href="index.php?ajouter_rdv">
                             <div class="panel-footer">
                                 <span class="pull-left">
-                                    Ajouter service 
+                                    Prendre rendez-vous 
                                 </span>
                                 <span class="pull-right">
                                     <i class="fa fa-arrow-circle-right"></i> 
@@ -367,13 +367,15 @@
                         </a>
                     </div>
                     <div class="text-right">
-                        <a href="index.php?view_orders">
-                            Voir Services <i class="fa fa-arrow-circle-right"></i>
+                        <a href="index.php?voir_rdv">
+                            Voir Rendez-vous <i class="fa fa-arrow-circle-right"></i>
                         </a>
                     </div>
                 </div>
         </div>
     </div>
+
+    
 
 </div>
 

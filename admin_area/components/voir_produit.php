@@ -46,6 +46,7 @@
                                 <th> Date Insertion </th>
                                 <th> Vendu </th>
                                 <th> Statut </th>
+                                <th> Stock </th>
                                 <th> Modifier </th>
                                 <th> Disponibilité </th>
                                 <th></th>
@@ -67,7 +68,8 @@
                                     $pro_categorie_id = $row_pro['pCategorieId'];
                                     $categorie_id = $row_pro['categorieId'];
                                     $pro_date = $row_pro['date'];
-                                    $pro_statut = $row_pro['statut']; 
+                                    $pro_statut = $row_pro['statut'];
+                                    $pro_stock = $row_pro['stock'];  
                                     $i++;
                             
                             ?>
@@ -105,15 +107,24 @@
                                      ?> 
                                 </td>
                                 <td> <?php echo $pro_statut ?> </td>
+                                <td> <?php echo $pro_stock ?> </td>
                                 <td> 
                                      <a href="index.php?modifier_produit=<?php echo $pro_id; ?>">
                                         <i class="fa fa-pencil"></i> Modifier
                                      </a> 
                                 </td>
                                 <td>
-                                     <a href="index.php?modifier_statutP=<?php echo $pro_id; ?>">
-                                        <i class="fa fa-exchange"></i> Changement
-                                     </a> 
+                                    <a href="index.php?modifier_statutP2=<?php echo $pro_id; ?>">
+                                        <i class="fa fa-chevron-up"></i> Disponible
+                                    </a> 
+                                    <br>
+                                    <a href="index.php?modifier_statutP3=<?php echo $pro_id; ?>">
+                                        <i class="fa fa-minus"></i> Unique
+                                    </a> 
+                                    <br>
+                                    <a href="index.php?modifier_statutP=<?php echo $pro_id; ?>">
+                                        <i class="fa fa-chevron-down"></i> Indisponible
+                                    </a>
                                 </td>
                                 <td> 
                                      <a href="index.php?supprimer_produit=<?php echo $pro_id; ?>">

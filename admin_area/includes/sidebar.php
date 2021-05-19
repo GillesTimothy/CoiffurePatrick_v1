@@ -151,6 +151,24 @@
                 </ul>
                 
             </li>
+
+            <li>
+                <a href="#" data-toggle="collapse" data-target="#fournisseur">
+                        
+                        <i class="fa fa-truck"></i> Fournisseurs
+                        <i class="fa fa-fw fa-caret-down"></i>
+                        
+                </a>
+                <ul id="fournisseur" class="collapse">
+                    <li>
+                        <a href="index.php?arrivage">arrivage</a>
+                    </li>
+                    <li>
+                        <a href="index.php?voir_stock">stock critique</a>
+                    </li>
+                </ul>
+                
+            </li>
             
             <li>
                 <a href="logout.php">

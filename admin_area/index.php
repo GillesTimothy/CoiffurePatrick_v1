@@ -95,6 +95,12 @@
                 if(isset($_GET['modifier_statutP'])){
                     include("components/modifier_statutP.php");
                 }
+                if(isset($_GET['modifier_statutP2'])){
+                    include("components/modifier_statutP.php");
+                }
+                if(isset($_GET['modifier_statutP3'])){
+                    include("components/modifier_statutP.php");
+                }
 
             ?>
             

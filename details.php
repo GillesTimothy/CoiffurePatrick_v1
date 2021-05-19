@@ -20,6 +20,8 @@
         $produit_img2 = $row_produit['produitImage2'];
         $produit_img3 = $row_produit['produitImage3'];
 
+        $produit_statut = $row_produit['statut'];
+
         $get_pCategorie = "select * from categorie_produit where idCategorie = '$produitCat_id'";
         $run_pCategorie = mysqli_query($con,$get_pCategorie);
         $row_pCategorie = mysqli_fetch_array($run_pCategorie);
@@ -147,16 +149,36 @@
                                 <div class="form-group">
                                     <label for="" class="col-md-5 control-label">Statut</label>
                                     <div class="col-md-7">
+                                        <?php 
                                         
-                                        <div class="alert alert-success" role="alert">Disponible</div>
-                                        <!--<div class="alert alert-info" role="alert">Stock Limité</div>
-                                        <div class="alert alert-warning" role="alert">Disponible en Commande</div>
-                                        <div class="alert alert-danger" role="alert">Indisponible</div>-->
+                                        if($produit_statut == 'Disponible') {
+                                            echo "<div class='alert alert-success' role='alert'>$produit_statut</div>";
+                                        }
+                                        elseif($produit_statut == 'Indisponible') {
+                                            echo "<div class='alert alert-danger' role='alert'>$produit_statut</div>";
+                                        }
+                                        elseif($produit_statut == 'Unique') {
+                                            echo "<div class='alert alert-warning' role='alert'>$produit_statut</div>";
+                                        }
+                                        elseif($produit_statut == 'Bientot Disponible') {
+                                            echo "<div class='alert alert-info' role='alert'>$produit_statut</div>";
+                                        }
+                                        ?>
                                     
                                     </div>  
                                 </div>
                                 <p class="price"><?php echo $produit_prix; ?> € </p>
-                                <p class="text-center button"><button name="submit" type="submit" class="btn btn-primary i fa fa-shopping-cart"> Ajouter à mon panier</button></p> 
+                                <?php 
+                                        
+                                    if($produit_statut == 'Disponible') {
+                                        echo "<p class='text-center button'><button name='submit' type='submit' class='btn btn-primary i fa fa-shopping-cart'> Ajouter à mon panier</button></p> ";
+                                    }
+                                    if($produit_statut == 'Unique') {
+                                        echo "<p class='text-center button'><button name='submit' type='submit' class='btn btn-primary i fa fa-shopping-cart'> Ajouter à mon panier</button></p> ";
+                                    }
+                                        
+                                ?>
+
                             </form>         
                         </div>
 
