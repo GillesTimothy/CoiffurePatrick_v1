@@ -34,10 +34,10 @@
                 
                 <ul id="products" class="collapse">
                     <li>
-                        <a href="index.php?insert_product">ajouter produit</a>
+                        <a href="index.php?ajout_produit">ajouter produit</a>
                     </li>
                     <li>
-                        <a href="index.php?view_products">voir produits  <span class="badge"><?php echo $count_products; ?></span></a>
+                        <a href="index.php?voir_produit">voir produits  <span class="badge"><?php echo $count_products; ?></span></a>
                         
                     </li>
                 </ul>

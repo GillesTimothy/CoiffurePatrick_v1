@@ -79,8 +79,21 @@
                     include("components/dashboard.php");
                 }
 
-                if(isset($_GET['insert_product'])){
-                    include("components/insert_product.php");
+                if(isset($_GET['ajout_produit'])){
+                    include("components/ajout_produit.php");
+                }
+
+                if(isset($_GET['voir_produit'])){
+                    include("components/voir_produit.php");
+                }
+                if(isset($_GET['modifier_produit'])){
+                    include("components/modifier_produit.php");
+                }
+                if(isset($_GET['supprimer_produit'])){
+                    include("components/supprimer_produit.php");
+                }
+                if(isset($_GET['modifier_statutP'])){
+                    include("components/modifier_statutP.php");
                 }
 
             ?>

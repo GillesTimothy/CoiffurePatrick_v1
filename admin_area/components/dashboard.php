@@ -217,7 +217,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <a href="index.php?insert_product">
+                        <a href="index.php?ajout_produit">
                             <div class="panel-footer">
                                 <span class="pull-left">
                                     Ajouter produit 
@@ -230,7 +230,7 @@
                         </a>
                     </div>
                     <div class="text-right">
-                        <a href="index.php?view_orders">
+                        <a href="index.php?voir_produit">
                             Voir Produits <i class="fa fa-arrow-circle-right"></i>
                         </a>
                     </div>
