@@ -73,16 +73,13 @@
                 
                 <ul id="cat" class="collapse">
                     <li>
-                        <a href="index.php?insert_cat"> ajouter catégorie produits </a>
+                        <a href="index.php?ajout_p_cat"> ajouter catégorie produits </a>
                     </li>
                     <li>
-                        <a href="index.php?view_cats"> voir catégories produits  <span class="badge"><?php echo $count_categorie_produit; ?></span></a>
+                        <a href="index.php?ajout_cat">ajouter catégorie</a>
                     </li>
                     <li>
-                        <a href="index.php?insert_p_cat">ajouter catégorie</a>
-                    </li>
-                    <li>
-                        <a href="index.php?view_p_cats">voir catégories  <span class="badge"><?php echo $count_categorie; ?></span></a>
+                        <a href="index.php?voir_cat">voir catégories <span class="badge"><?php echo $count_categorie_produit; ?></span>   <span class="badge"><?php echo $count_categorie; ?></span></a>
                     </li>
                 </ul>
 

@@ -83,7 +83,9 @@
                     include("components/dashboard.php");
                 }
 
-                
+                /*
+                *  PRODUITS !
+                */
                 if(isset($_GET['ajout_produit'])){
                     include("components/ajout_produit.php");
                 }
@@ -106,7 +108,9 @@
                     include("components/modifier_statutP.php");
                 }
 
-
+                /*
+                *  SERVICES !
+                */
                 if(isset($_GET['ajout_service'])){
                     include("components/ajout_service.php");
                 }
@@ -122,6 +126,27 @@
                 if(isset($_GET['modifier_statutS'])){
                     include("components/modifier_statutS.php");
                 }
+
+                /*
+                *  CATEGORIES !
+                */
+                if(isset($_GET['ajout_p_cat'])){
+                    include("components/ajout_p_cat.php");
+                }
+                if(isset($_GET['ajout_cat'])){
+                    include("components/ajout_cat.php");
+                }
+                if(isset($_GET['voir_cat'])){
+                    include("components/voir_cat.php");
+                }
+                if(isset($_GET['supprimer_p_cat'])){
+                    include("components/supprimer_p_cat.php");
+                }
+                if(isset($_GET['supprimer_cat'])){
+                    include("components/supprimer_cat.php");
+                }
+                
+                
 
             ?>
             
