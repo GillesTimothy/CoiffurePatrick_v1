@@ -145,6 +145,12 @@
                 if(isset($_GET['supprimer_cat'])){
                     include("components/supprimer_cat.php");
                 }
+                if(isset($_GET['modifier_p_cat'])){
+                    include("components/modifier_p_cat.php");
+                }
+                if(isset($_GET['modifier_cat'])){
+                    include("components/modifier_cat.php");
+                }
                 
                 
 

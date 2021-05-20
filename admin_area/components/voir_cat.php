@@ -35,6 +35,7 @@
                             <tr>
                                 <th> # </th>
                                 <th> Libellé de la catégorie </th>
+                                <th> Modifier </th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -51,6 +52,11 @@
                             <tr>
                                 <td> <?php echo $i; ?> </td>
                                 <td> <?php echo $cat_p_libelle; ?> </td>
+                                <td> 
+                                     <a href="index.php?modifier_p_cat=<?php echo $cat_p_id; ?>">
+                                        <i class="fa fa-pencil"></i> Modifier
+                                     </a> 
+                                </td>
                                 <td> 
                                      <a href="index.php?supprimer_p_cat=<?php echo $cat_p_id; ?>">
                                         <i class="fa fa-trash-o"></i>
@@ -79,6 +85,7 @@
                             <tr>
                                 <th> # </th>
                                 <th> Libellé de la catégorie globale</th>
+                                <th> Modifier </th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -95,6 +102,11 @@
                             <tr>
                                 <td> <?php echo $i; ?> </td>
                                 <td> <?php echo $cat_libelle; ?> </td>
+                                <td> 
+                                     <a href="index.php?modifier_cat=<?php echo $cat_id; ?>">
+                                        <i class="fa fa-pencil"></i> Modifier
+                                     </a> 
+                                </td>
                                 <td> 
                                      <a href="index.php?supprimer_cat=<?php echo $cat_id; ?>">
                                         <i class="fa fa-trash-o"></i>
