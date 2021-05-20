@@ -40,6 +40,8 @@
         $produit_img2 = $row_produit['produitImage2'];
         $produit_img3 = $row_produit['produitImage3'];
 
+        $produit_statut = $row_produit['statut'];
+
         $get_pCategorie = "select * from categorie_produit where idCategorie = '$produitCat_id'";
         $run_pCategorie = mysqli_query($con,$get_pCategorie);
         $row_pCategorie = mysqli_fetch_array($run_pCategorie);

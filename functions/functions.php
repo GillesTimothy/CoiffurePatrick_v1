@@ -33,8 +33,6 @@ function add_panier() {
         if($run_query) {
             echo '<script>alert("produit bien ajouter au panier")</script>';
             echo '<script>window.open("boutique.php","_self")</script>';
-            //echo "<script>alert('Le produit à bien été ajouter au panier !')</script>";
-            //echo "<script>window.open('details.php?pro_id=$produit_id', '_self')</script>";   
         }
         else {
             echo 'fuck you ca marche pas l"ajout a la BDD';

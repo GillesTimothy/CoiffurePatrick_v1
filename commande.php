@@ -38,12 +38,34 @@ if(isset($_SESSION['utilisateur_prenom'])){
             $get_produit = "select * from produits where idProduit = '$pro_id' ";
             $run_produit = mysqli_query($con, $get_produit);
             while($row_produit = mysqli_fetch_array($run_produit)){
+                $stock = $row_produit['stock'];
                 $produit_prix = $row_produit['prix'];
                 $sous_total = $row_produit['prix']*$pro_quantite; 
+                $stock_article = $stock - $pro_quantite;
             }
-            $insert_contenu_commande = "insert into contenu_commande (numeroCommande, idArticle, sousTotal, quantite) values ('$contenu_numero_commande', '$pro_id', '$sous_total', '$pro_quantite')";
-            $run_contenu_commande = mysqli_query($db, $insert_contenu_commande);  
+            if($stock_article >= 1 ){
+                $insert_contenu_commande = "insert into contenu_commande (numeroCommande, idArticle, sousTotal, quantite) values ('$contenu_numero_commande', '$pro_id', '$sous_total', '$pro_quantite')";
+                $run_contenu_commande = mysqli_query($db, $insert_contenu_commande); 
+                $modif_stock_article =  "update produits set stock='$stock_article' where idProduit='$pro_id'";
+                $run_modif_stock_article = mysqli_query($con,$modif_stock_article);
+                if($run_modif_stock_article){
+                    echo '<script>alert("ok stock.");</script>';
+                }  
             }
+            else{
+                echo '<script>alert("stock aticle insufisant !");</script>';
+                $pro_quantite = $stock;
+                echo '<script>alert("la quantité a été adapté à nos stock !");</script>';
+                $insert_contenu_commande = "insert into contenu_commande (numeroCommande, idArticle, sousTotal, quantite) values ('$contenu_numero_commande', '$pro_id', '$sous_total', '$pro_quantite')";
+                $run_contenu_commande = mysqli_query($db, $insert_contenu_commande); 
+                
+                $modif_stock_article =  "update produits set stock=0 where idProduit='$pro_id'";
+                $run_modif_stock_article = mysqli_query($con,$modif_stock_article);
+
+                $modif_statut_article =  "update produits set statut='Bientot Disponible' where idProduit='$pro_id'";
+                $run_modif_statut_article = mysqli_query($con,$modif_statut_article);
+            }
+        }
 
         if($run_commande) {
             

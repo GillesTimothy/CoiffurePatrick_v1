@@ -36,7 +36,11 @@
 
         $get_categorie_produit = "select * from categorie_produit";
         $run_categorie_produit = mysqli_query($con,$get_categorie_produit);
-        $count_categorie_produit = mysqli_num_rows($run_categorie_produit);        
+        $count_categorie_produit = mysqli_num_rows($run_categorie_produit);    
+        
+        $get_services = "select * from services";
+        $run_services = mysqli_query($con,$get_services);
+        $count_services = mysqli_num_rows($run_services);   
 
 ?>
 
@@ -79,10 +83,10 @@
                     include("components/dashboard.php");
                 }
 
+                
                 if(isset($_GET['ajout_produit'])){
                     include("components/ajout_produit.php");
                 }
-
                 if(isset($_GET['voir_produit'])){
                     include("components/voir_produit.php");
                 }
@@ -100,6 +104,23 @@
                 }
                 if(isset($_GET['modifier_statutP3'])){
                     include("components/modifier_statutP.php");
+                }
+
+
+                if(isset($_GET['ajout_service'])){
+                    include("components/ajout_service.php");
+                }
+                if(isset($_GET['voir_service'])){
+                    include("components/voir_service.php");
+                }
+                if(isset($_GET['supprimer_service'])){
+                    include("components/supprimer_service.php");
+                }
+                if(isset($_GET['modifier_service'])){
+                    include("components/modifier_service.php");
+                }
+                if(isset($_GET['modifier_statutS'])){
+                    include("components/modifier_statutS.php");
                 }
 
             ?>

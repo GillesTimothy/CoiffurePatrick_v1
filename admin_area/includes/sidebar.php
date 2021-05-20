@@ -54,10 +54,10 @@
                 
                 <ul id="services" class="collapse">
                     <li>
-                        <a href="index.php?insert_product">ajouter service</a>
+                        <a href="index.php?ajout_service">ajouter service</a>
                     </li>
                     <li>
-                        <a href="index.php?view_products">voir services</a>
+                        <a href="index.php?voir_service">voir services <span class="badge"><?php echo $count_services; ?></span></a>
                     </li>
                 </ul>
                 
@@ -161,7 +161,7 @@
                 </a>
                 <ul id="fournisseur" class="collapse">
                     <li>
-                        <a href="index.php?arrivage">arrivage</a>
+                        <a href="index.php?arrivage">arrivage produits</a>
                     </li>
                     <li>
                         <a href="index.php?voir_stock">stock critique</a>

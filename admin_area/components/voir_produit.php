@@ -100,10 +100,10 @@
                                 <td> <?php echo $pro_date ?> </td>
                                 <td> 
                                     <?php 
-                                        $get_vendu = "select * from contenu_commande where idArticle='$pro_id'";
+                                        $get_vendu = "select SUM(quantite) from contenu_commande where idArticle='$pro_id'";
                                         $run_vendu = mysqli_query($con,$get_vendu);
-                                        $count = mysqli_num_rows($run_vendu);
-                                        echo $count;
+                                        $row_vendu = mysqli_fetch_array($run_vendu);
+                                        echo $row_vendu[0];
                                      ?> 
                                 </td>
                                 <td> <?php echo $pro_statut ?> </td>

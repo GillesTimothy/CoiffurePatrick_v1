@@ -214,7 +214,7 @@ if(isset($_POST['submit'])){
     if($run_product){
         
         echo "<script>alert('Le produit a été ajouté avec succès !')</script>";
-        echo "<script>window.open('insert_product.php','_seft')</script>";
+        echo "<script>window.open('ajout_produit.php','_seft')</script>";
         
     }
     
