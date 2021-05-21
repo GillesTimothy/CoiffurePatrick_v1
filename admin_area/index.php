@@ -182,6 +182,14 @@
                     include("components/modifier_statutC.php");
                 }
 
+                /*
+                *  FOURNISSEUR !
+                */
+                if(isset($_GET['arrivage_produit'])){
+                    include("components/arrivage_produit.php");
+                }
+                
+
 
                 
                 

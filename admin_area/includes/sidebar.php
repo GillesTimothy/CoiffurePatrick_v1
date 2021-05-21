@@ -158,7 +158,7 @@
                 </a>
                 <ul id="fournisseur" class="collapse">
                     <li>
-                        <a href="index.php?arrivage">arrivage produits</a>
+                        <a href="index.php?arrivage_produit">arrivage produits</a>
                     </li>
                     <li>
                         <a href="index.php?voir_stock">stock critique</a>
