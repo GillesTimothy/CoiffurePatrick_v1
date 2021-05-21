@@ -33,7 +33,7 @@
                 </div>
             </div>
             
-            <a href="index.php?view_products">
+            <a href="index.php?voir_commande">
                 <div class="panel-footer">
                     <span class="pull-left">
                         Voir Détails 
@@ -61,7 +61,7 @@
                 </div>
             </div>
             
-            <a href="index.php?view_customers">
+            <a href="index.php?voir_rdv">
                 <div class="panel-footer">
                     <span class="pull-left">
                         Voir Détails 
@@ -89,7 +89,7 @@
                 </div>
             </div>
             
-            <a href="index.php?view_p_cats">
+            <a href="index.php?voir_disponibilite">
                 <div class="panel-footer">
                     <span class="pull-left">
                         Mettre A Jour Disponibilités 
@@ -117,7 +117,7 @@
                 </div>
             </div>
             
-            <a href="index.php?view_orders">
+            <a href="index.php?voir_client">
                 <div class="panel-footer">
                     <span class="pull-left">
                         Voir Détails 

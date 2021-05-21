@@ -79,6 +79,7 @@
                                     $_SESSION['utilisateur_nom'] = $row['nom'];
                                     $_SESSION['utilisateur_telephone'] = $row['telephone'];
                                     $_SESSION['utilisateur_adresse'] = $row['adresse'];
+                                    $_SESSION['utilisateur_statut'] = $row['statut'];
                                     echo '<script>window.open("index.php","_self")</script>';
                                 }
                                 else{

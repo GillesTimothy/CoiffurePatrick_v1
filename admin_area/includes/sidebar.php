@@ -105,25 +105,25 @@
             </li>
             
             <li>
-                <a href="index.php?view_customers">
+                <a href="index.php?voir_client">
                     <i class="fa fa-fw fa-users"></i>Clients  <span class="badge"><?php echo $count_utilisateur; ?></span>
                 </a>
             </li>
             
             <li>
-                <a href="index.php?view_orders">
+                <a href="index.php?voir_commande">
                     <i class="fa fa-fw fa-book"></i>Commandes  <span class="badge"><?php echo $count_commande; ?></span>
                 </a>
             </li>
             
             <li>
-                <a href="index.php?view_rdv">
+                <a href="index.php?voir_rdv">
                     <i class="fa fa-fw fa-money"></i>Rendez-vous 
                 </a>
             </li>
 
             <li>
-                <a href="index.php?view_dispo">
+                <a href="index.php?voir_disponibilite">
                     <i class="fa fa-fw fa-calendar"></i>Disponibilités  
                 </a>
             </li>
@@ -137,13 +137,13 @@
                 </a>
                 <ul id="users" class="collapse">
                     <li>
-                        <a href="index.php?insert_user">ajouter utilisateur</a>
+                        <a href="index.php?ajout_utilisateur">ajouter utilisateur</a>
                     </li>
                     <li>
-                        <a href="index.php?view_users">voir utilisateurs  <span class="badge"><?php echo $count_admin; ?></span></a>
+                        <a href="index.php?voir_utilisateur">voir utilisateurs  <span class="badge"><?php echo $count_admin; ?></span></a>
                     </li>
                     <li>
-                        <a href="index.php?user_profile">option</a>
+                        <a href="index.php?utilisateur_option">option</a>
                     </li>
                 </ul>
                 

@@ -45,6 +45,12 @@
             
             </div>
 
+            <?php 
+                if(isset($_SESSION['utilisateur_prenom'])){
+                    if($_SESSION['utilisateur_statut'] == 'Actif'){
+            
+            ?>
+
             <div  class="col-md-9">
                 <div class="box">
                     <?php if(isset($_GET['mes_commandes'])) {
@@ -77,6 +83,52 @@
 
                 </div>
             </div>
+
+            <?php }} ?>
+
+            <?php 
+                if(isset($_SESSION['utilisateur_prenom'])){
+                    if($_SESSION['utilisateur_statut'] == 'En Attente'){
+            ?>
+                        
+                        <div  class="col-md-9">
+                            <div class="box">
+                            <center>
+                                <h1> Compte en attente de validation. </h1>
+                                <p class="lead"> </p>
+                                <p class="text-muted">
+                                Si vous avez la moindre question concernant votre compte, merci de nous contacter via le lien suivant : <a href="../contact.php"> contact </a>
+                                </p>
+                            </center>
+                            </div>
+                        </div>
+
+            <?php
+                    }
+                }
+            ?>
+
+            <?php 
+                if(isset($_SESSION['utilisateur_prenom'])){
+                    if($_SESSION['utilisateur_statut'] == 'Bloque'){
+            ?>
+                        
+                        <div  class="col-md-9">
+                            <div class="box">
+                            <center>
+                                <h1> Compte utilisateur bloqué ! </h1>
+                                <p class="lead"> </p>
+                                <p class="text-muted">
+                                Si vous avez la moindre question concernant votre compte, merci de nous contacter via le lien suivant : <a href="../contact.php"> contact </a>
+                                </p>
+                            </center>
+                            </div>
+                        </div>
+
+            <?php
+                    }
+                }
+            ?>
         </div>
     </div>
 

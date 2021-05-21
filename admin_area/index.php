@@ -169,6 +169,19 @@
                     include("components/supprimer_slide.php");
                 }
 
+                /*
+                *  CLIENTS !
+                */
+                if(isset($_GET['voir_client'])){
+                    include("components/voir_client.php");
+                }
+                if(isset($_GET['supprimer_client'])){
+                    include("components/supprimer_client.php");
+                }
+                if(isset($_GET['modifier_statutC'])){
+                    include("components/modifier_statutC.php");
+                }
+
 
                 
                 
