@@ -39,7 +39,7 @@
         <div class="col-lg-12">
             <ol class="breadcrumb">
                 <li class="active">
-                    <i class="fa fa-dashboard"></i> Dashboard / Insertion Services
+                    <i class="fa fa-dashboard"></i> Dashboard / Insertion Slides
                 </li>
             </ol>
         </div>
@@ -50,36 +50,34 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <i class="fa fa-money fa-fw"></i> Insertion Services
+                        <i class="fa fa-money fa-fw"></i> Insertion Slides
                     </h3>
                 </div>
                 <div class="panel-body">
                     <form method="post" class="form-horizontal" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label class="col-md-3 control-label"> Libellé du Service </label>
+                            <label class="col-md-3 control-label"> Nom de la slide </label>
                             <div class="col-md-6">
-                                <input name="service_libelle" type="text" class="form-control" required>
+                                <input name="slide_title" type="text" class="form-control" required>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="col-md-3 control-label"> Durée </label>
-                            <div class="col-md-6">
-                                <input name="service_duree" type="time" class="form-control" required>
-                            </div>
-                        </div>
+                        
 
                         <div class="form-group">
-                            <label class="col-md-3 control-label"> Service Descripton </label>
+                            <label class="col-md-3 control-label"> Slide Image </label> 
                             <div class="col-md-6">
-                                <textarea name="service_desc" id="" cols="19" rows="6" class="form-control" style="resize:none"></textarea>
+                                <input name="slide_img" type="file" class="form-control" required>
                             </div>
+                       
                         </div>
+                   
+                        
 
                         <div class="form-group">
                             <label class="col-md-3 control-label">  </label>
                             <div class="col-md-6">
-                                <input name="submit" type="submit" class="btn btn-primary form-control" value="Ajouter le Service" required>
+                                <input name="submit" type="submit" class="btn btn-primary form-control" value="Ajouter l' Image" required>
                             </div>
                         </div>
 
@@ -93,15 +91,15 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <i class="fa fa-info fa-fw"></i> Informations Complémentaire
+                        <i class="fa fa-info fa-fw"></i> Informations Complémentaires
                     </h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="col-md-3 control-label"> Encodage durée du service </label> 
+                            <label class="col-md-3 control-label"> Taille Images Slides</label> 
                             <div class="col-md-6">
-                                <input type="text" disabled="disabled" class="form-control" value=" heure : minute " require></input>
+                                <input type="text" disabled="disabled" class="form-control" value=" 1200 x 534 px" require></input>
                             </div>
                         </div>
                     </form>
@@ -116,18 +114,22 @@
 
 if(isset($_POST['submit'])){
     
-    $service_libelle = $_POST['service_libelle'];
-    $service_duree = $_POST['service_duree'];
-    $service_desc = $_POST['service_desc'];
+    $slide_title = $_POST['slide_title'];
     
-    $insert_service = "insert into services (libelle, duree, description) values ('$service_libelle','$service_duree', '$service_desc')";
+    $slide_img = $_FILES['slide_img']['name'];
     
-    $run_service = mysqli_query($con,$insert_service);
+    $temp_name1 = $_FILES['slide_img']['tmp_name'];
     
-    if($run_service){
+    move_uploaded_file($temp_name1,"slides_images/$slide_img");
+
+    $insert_slide = "insert into carousel (slide_nom, slide_image) values ('$slide_title', '$slide_img')";
+    
+    $run_slide = mysqli_query($con,$insert_slide);
+    
+    if($run_slide){
         
-        echo "<script>alert('Le service a été ajouté avec succès !')</script>";
-        echo "<script>window.open('index.php?voir_service','_seft')</script>";
+        echo "<script>alert('L image a été ajouté avec succès !')</script>";
+        echo "<script>window.open('index.php?voir_slide','_seft')</script>";
         
     }
     

@@ -95,10 +95,10 @@
                 
                 <ul id="slides" class="collapse">
                     <li>
-                        <a href="index.php?insert_slide">ajouter slide </a>
+                        <a href="index.php?ajout_slide">ajouter slide </a>
                     </li>
                     <li>
-                        <a href="index.php?view_slides">voir slides </a>
+                        <a href="index.php?voir_slide">voir slides <span class="badge"><?php echo $count_slide; ?></span></a>
                     </li>
                 </ul>
                 

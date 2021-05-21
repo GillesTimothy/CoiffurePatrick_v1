@@ -19,7 +19,7 @@
                        </div>
                        ";       
                    }
-                   $get_slides = "select * from carousel LIMIT 1,3";                   
+                   $get_slides = "select * from carousel LIMIT 1,5";                   
                    $run_slides = mysqli_query($con,$get_slides);                   
                    while($row_slides=mysqli_fetch_array($run_slides)){                       
                        $slide_name = $row_slides['slide_nom'];

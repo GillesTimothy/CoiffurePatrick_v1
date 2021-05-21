@@ -40,7 +40,11 @@
         
         $get_services = "select * from services";
         $run_services = mysqli_query($con,$get_services);
-        $count_services = mysqli_num_rows($run_services);   
+        $count_services = mysqli_num_rows($run_services);  
+
+        $get_slide = "select * from carousel";
+        $run_slide = mysqli_query($con,$get_slide);
+        $count_slide = mysqli_num_rows($run_slide);
 
 ?>
 
@@ -151,6 +155,21 @@
                 if(isset($_GET['modifier_cat'])){
                     include("components/modifier_cat.php");
                 }
+
+                /*
+                *  IMAGES !
+                */
+                if(isset($_GET['ajout_slide'])){
+                    include("components/ajout_slide.php");
+                }
+                if(isset($_GET['voir_slide'])){
+                    include("components/voir_slide.php");
+                }
+                if(isset($_GET['supprimer_slide'])){
+                    include("components/supprimer_slide.php");
+                }
+
+
                 
                 
 

@@ -111,7 +111,7 @@ if(isset($_POST['submit'])){
     if($run_cat){
         
         echo "<script>alert('La catégorie a été ajouté avec succès !')</script>";
-        echo "<script>window.open('ajout_cat.php','_seft')</script>";
+        echo "<script>window.open('index.php?voir_cat','_seft')</script>";
         
     }
     
