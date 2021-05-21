@@ -134,7 +134,7 @@ if(isset($_POST['submit'])){
     $product_stock = $_POST['produit_stock'];
     
     $nouveau_stock = $stock + $product_stock;
-    $update_product = "update produits set stock=$nouveau_stock where idProduit='$product_title'";
+    $update_product = "update produits set stock=$nouveau_stock, statut='Disponible' where idProduit='$product_title'";
     $run_product = mysqli_query($con,$update_product);
     
     if($run_product){

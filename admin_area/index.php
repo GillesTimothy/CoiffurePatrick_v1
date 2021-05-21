@@ -189,8 +189,36 @@
                     include("components/arrivage_produit.php");
                 }
                 
-
-
+                /*
+                *  COMMANDES !
+                */
+                if(isset($_GET['voir_commande'])){
+                    include("components/voir_commande.php");
+                }
+                if(isset($_GET['voir_commande_client'])){
+                    include("components/voir_commande_client.php");
+                }
+                if(isset($_GET['supprimer_commande'])){
+                    include("components/supprimer_commande.php");
+                }
+                if(isset($_GET['accepter_commande'])){
+                    include("components/accepter_commande.php");
+                }
+                if(isset($_GET['disponible_commande'])){
+                    include("components/disponible_commande.php");
+                }
+                if(isset($_GET['terminer_commande'])){
+                    include("components/terminer_commande.php");
+                }
+                if(isset($_GET['modifier_contenu_commande'])){
+                    include("components/modifier_commande.php");
+                }
+                if(isset($_GET['ajout_commande'])){
+                    include("components/modifier_ajout.php");
+                }
+                if(isset($_GET['voir_contenu_commande'])){
+                    include("components/voir_contenu_commande.php");
+                }
                 
                 
 
