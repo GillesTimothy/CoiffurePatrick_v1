@@ -152,7 +152,6 @@
                                 <th> Montant</th>
                                 <th> Date Réservation</th>
                                 <th> Statut</th>
-                                <th> </th>                             
                             </tr>
                         </thead>
                         <tbody>
@@ -189,7 +188,7 @@
                                 <td> <?php echo $prixTotal; ?> </td>
                                 <td> <?php echo $date_commande; ?> </td>
                                 <td> <?php echo $statut_commande; ?> </td>
-                                <td> ACCEPTER </td>
+                                
                             <?php
                                 }
                             
@@ -200,7 +199,7 @@
                     </table>
                 </div>
                 <div class="text-right">
-                    <a href="index.php?view_orders">
+                    <a href="index.php?voir_commande">
                         Voir commandes <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
